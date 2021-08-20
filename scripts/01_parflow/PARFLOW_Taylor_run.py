@@ -64,8 +64,13 @@ for i in list(itertools.product(*AOC_vals)):
     AOC_tuples.append(i)
 
 # # temporary
-AOC_tuples = AOC_tuples[200:210]
-print(len(AOC_tuples))
+AOC_tuples = AOC_tuples[90:100]
+idx = 0
+for AO in AOC_tuples:
+    print(idx, AO)
+    idx = idx + 1
+# print(AOC_tuples))
+del idx
 
 # Run ensemble
 for idx in range(len(AOC_tuples)):
@@ -235,5 +240,4 @@ for idx in range(len(AOC_tuples)):
   run.write(file_format='json')
   run.run()
 
-  sys.exit()
 
