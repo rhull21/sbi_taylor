@@ -1,0 +1,6 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+  File "lstm_sbi.py", line 216
+    books = [f'Posterior Run Time: {end_time}']                     ]
+                                                                    ^
+SyntaxError: unmatched ']'

@@ -1,0 +1,149 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 100%|██████████| 5000/5000 [00:00<00:00, 166329.75it/s]
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 13849it [00:00, 335390.30it/s]          
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 13469it [00:00, 335702.84it/s]          
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 12503it [00:00, 297538.07it/s]          
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 6204it [00:00, 156240.95it/s]           
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 13824it [00:00, 337216.74it/s]          
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 7838it [00:00, 112569.27it/s]           
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 13797it [00:00, 345710.42it/s]          
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 14877it [00:00, 359522.13it/s]          
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 100%|██████████| 5000/5000 [00:00<00:00, 281029.16it/s]
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 100%|██████████| 5000/5000 [00:00<00:00, 339465.83it/s]
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 13018it [00:00, 322433.00it/s]          
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 100%|██████████| 5000/5000 [00:00<00:00, 307974.45it/s]
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 7190it [00:00, 178303.74it/s]           
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 100%|██████████| 5000/5000 [00:00<00:00, 324536.06it/s]
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 14524it [00:00, 337230.94it/s]          
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 14197it [00:00, 347887.63it/s]          
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 14544it [00:00, 355369.15it/s]          
+lstm_sbi.py:368: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+warning: file exists
+log prob true 3.78967
+log prob true 3.248194
+log prob true 1.4537911
+log prob true 2.778305
+log prob true 2.8536007
+log prob true -3.8519847
+log prob true 3.4670079
+log prob true 2.747633
+log prob true -3.4727201
+log prob true 3.5082579
+log prob true -5.2632346
+log prob true -4.6800747
+log prob true 2.5543997
+log prob true 3.209394
+log prob true 1.9306234
+log prob true -3.890659
+log prob true 1.4934239
+log prob true 3.1549761

@@ -46,11 +46,11 @@ gages = [9110000]
 ensemble_name = '0819_01'
 
 # (where it references)
-path_folder = '/home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/'
-# (where the supporting information is)
+path_folder = '/scratch/taylor/ensembles_sbi/02_PARFLOW_OUT/02_PARFLOW_OUT/' # '/home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/' # '/scratch/taylor/ensembles_sbi/02_PARFLOW_OUT/02_PARFLOW_OUT/' 
+# (where the supporting information is)/scratch/taylor/ensembles_sbi/02_PARFLOW_OUT/02_PARFLOW_OUT
 supporting_folder = '/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/00_supporting/'
 # (where it saves)
-save_folder = '/home/qh8373/SBI_TAYLOR/data/01_a_stream_sim/'
+save_folder =  '/home/qh8373/SBI_TAYLOR/data/01_a_stream_sim/' # '/scratch/qh8373/test/'
 
 
 # year of simulation
@@ -64,7 +64,6 @@ N_hours = no_day*24
 
 # Set Parameter of Concernm (POC) - 'K', 'M', 'KM' 
 POC = 'KM'
-
 # do multiple for different K / Mannings value
 AOC_vals = []
 for idx in range(len(POC)):
@@ -79,11 +78,16 @@ for idx in range(len(POC)):
 # Set up number of unique permutations of lists in tuples
 # https://cmsdk.com/python/all-possible-permutations-of-multiple-lists-and-sizes.html 
 AOC_tuples = []
+idx = 0
 for i in list(itertools.product(*AOC_vals)):
     AOC_tuples.append(i)
-
+    # print(idx, ' ', i)
+    idx = idx + 1
+    
+del idx
+    
 # temporary
-AOC_tuples = AOC_tuples[0:1]
+# AOC_tuples = AOC_tuples[13:14]
 
 # ---- set overland flow globals 
 # # streamflow = calculate_overland_flow_grid(pressure, slopex, slopey, mannings, dx, dy, flow_method='OverlandFlow')
@@ -117,7 +121,7 @@ for id_watershed in gages:
     for idx in range(len(AOC_tuples)):
         # make this as the AOC value
         AOC = AOC_tuples[idx]
-        # print(AOC)
+        print(idx, ' ', AOC)
         
         # create the name run
         AOC_str = ''
@@ -129,9 +133,11 @@ for id_watershed in gages:
         # set up directories for run (output) and read (input)
         name_run = f'{ensemble_name}_{AOC_str}_{year_run}' 
         read_dir = f'{path_folder}{name_run}'
+        if os.path.isdir(read_dir)==False:
+            print('run does not exist')
+            continue
         run_dir = save_folder
 
-        
         #setting all file paths to copy required input files
         path_slope_x = f'{read_dir}/slope_x.pfb'
         path_slope_y = f'{read_dir}/slope_y.pfb'
@@ -145,6 +151,15 @@ for id_watershed in gages:
             mannings = AOC[POC.find('M')]
         # print(type(mannings), mannings)
         
+        
+        # for saving streamflow time series
+        runname_out = f'{run_dir}{name_run}_{id_watershed}'
+        csv_name = f'{runname_out}.out.flow.csv'
+        if os.path.isfile(csv_name):
+            print(csv_name)
+            print('exists')
+            continue    
+            
         # read streamflow
         # N_hours = 1 # manual, comment out
         # streamflow data [index, gaged flow, max flow]
@@ -179,8 +194,7 @@ for id_watershed in gages:
         
         # save work:
         # for saving streamflow time series
-        runname_out = f'{run_dir}{name_run}_{id_watershed}'
         streamflow_df = pd.DataFrame(data=streamflow_data, columns=['idx', 'gage_flow', 'max_flow'])
-        streamflow_df.to_csv(f'{runname_out}.out.flow.csv')
+        streamflow_df.to_csv(csv_name)
         print(f'{runname_out} complete')
         del streamflow_df, streamflow_data

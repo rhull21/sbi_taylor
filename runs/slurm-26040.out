@@ -1,0 +1,29 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/lstmutils.py:177: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_window[f'AOC_{l}'] = AOC_scale[l]
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/lstmutils.py:179: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_window['Y'] = data[member_name]
+warning: file exists
+saving
+Epoch: 0, loss: 0.00168
+Epoch: 1, loss: 0.00288
+Epoch: 2, loss: 0.00396
+Epoch: 3, loss: 0.00485
+Epoch: 4, loss: 0.00553
+Epoch: 5, loss: 0.00597
+Epoch: 6, loss: 0.00621
+Epoch: 7, loss: 0.00635
+Epoch: 8, loss: 0.00644
+Epoch: 9, loss: 0.00650
+
+0:00:01.430087
+the relationship between loss and epochs for given hyper parameters

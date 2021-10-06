@@ -1,0 +1,34 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/lstmutils.py:177: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_window[f'AOC_{l}'] = AOC_scale[l]
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/lstmutils.py:179: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_window['Y'] = data[member_name]
+warning: file exists
+saving
+Epoch: 0, loss: 0.00137
+Epoch: 1, loss: 0.00068
+Epoch: 2, loss: 0.00052
+Epoch: 3, loss: 0.00060
+Epoch: 4, loss: 0.00062
+Epoch: 5, loss: 0.00056
+Epoch: 6, loss: 0.00050
+Epoch: 7, loss: 0.00045
+Epoch: 8, loss: 0.00041
+Epoch: 9, loss: 0.00037
+
+0:40:15.529744
+the relationship between loss and epochs for given hyper parameters
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 209, in <module>
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/03_sbi_lstm/lstm_build_utils.py", line 168, in runLSTM
+    plt.plot(epoch_array, loss_array)
+NameError: name 'plt' is not defined

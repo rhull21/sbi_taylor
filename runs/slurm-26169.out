@@ -1,0 +1,9 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+warning: file exists
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 289, in <module>
+    posterior = pickle.load()
+TypeError: load() missing required argument 'file' (pos 1)

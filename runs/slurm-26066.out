@@ -1,0 +1,6 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 62, in <module>
+    list_df_cond = cond_buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_name, ensemble_path)
+NameError: name 'cond_buildLSTM' is not defined

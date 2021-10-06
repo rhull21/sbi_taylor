@@ -1,0 +1,114 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/sbiutils.py:110: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(y_out)
+Running 1000 simulations.:   0%|          | 0/1000 [00:00<?, ?it/s]Running 1000 simulations.:   6%|▌         | 55/1000 [00:00<00:01, 545.34it/s]Running 1000 simulations.:  11%|█         | 110/1000 [00:00<00:01, 545.97it/s]Running 1000 simulations.:  16%|█▋        | 165/1000 [00:00<00:01, 546.16it/s]Running 1000 simulations.:  22%|██▏       | 220/1000 [00:00<00:01, 546.52it/s]Running 1000 simulations.:  28%|██▊       | 276/1000 [00:00<00:01, 548.26it/s]Running 1000 simulations.:  33%|███▎      | 331/1000 [00:00<00:01, 545.82it/s]Running 1000 simulations.:  39%|███▊      | 386/1000 [00:00<00:01, 544.16it/s]Running 1000 simulations.:  44%|████▍     | 441/1000 [00:00<00:01, 543.46it/s]Running 1000 simulations.:  50%|████▉     | 496/1000 [00:00<00:00, 543.98it/s]Running 1000 simulations.:  55%|█████▌    | 551/1000 [00:01<00:00, 543.80it/s]Running 1000 simulations.:  60%|██████    | 605/1000 [00:01<00:00, 542.57it/s]Running 1000 simulations.:  66%|██████▌   | 660/1000 [00:01<00:00, 544.64it/s]Running 1000 simulations.:  72%|███████▏  | 715/1000 [00:01<00:00, 545.41it/s]Running 1000 simulations.:  77%|███████▋  | 770/1000 [00:01<00:00, 546.53it/s]Running 1000 simulations.:  82%|████████▎ | 825/1000 [00:01<00:00, 545.99it/s]Running 1000 simulations.:  88%|████████▊ | 880/1000 [00:01<00:00, 546.27it/s]Running 1000 simulations.:  94%|█████████▎| 935/1000 [00:01<00:00, 546.49it/s]Running 1000 simulations.:  99%|█████████▉| 990/1000 [00:01<00:00, 545.73it/s]Running 1000 simulations.: 100%|██████████| 1000/1000 [00:01<00:00, 545.33it/s]
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 9336it [00:00, 377339.43it/s]           
+lstm_sbi.py:312: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 9460it [00:00, 382380.70it/s]           
+lstm_sbi.py:312: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  points=torch.tensor(true_theta),
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  arr_value = np.array(value)
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/pandas/core/internals/blocks.py:867: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr_value = np.array(value)
+Training neural network. Epochs trained:  1Training neural network. Epochs trained:  2Training neural network. Epochs trained:  3Training neural network. Epochs trained:  4Training neural network. Epochs trained:  5Training neural network. Epochs trained:  6Training neural network. Epochs trained:  7Training neural network. Epochs trained:  8Training neural network. Epochs trained:  9Training neural network. Epochs trained:  10Training neural network. Epochs trained:  11Training neural network. Epochs trained:  12Training neural network. Epochs trained:  13Training neural network. Epochs trained:  14Training neural network. Epochs trained:  15Training neural network. Epochs trained:  16Training neural network. Epochs trained:  17Training neural network. Epochs trained:  18Training neural network. Epochs trained:  19Training neural network. Epochs trained:  20Training neural network. Epochs trained:  21Training neural network. Epochs trained:  22Training neural network. Epochs trained:  23Training neural network. Epochs trained:  24Training neural network. Epochs trained:  25Training neural network. Epochs trained:  26Training neural network. Epochs trained:  27Training neural network. Epochs trained:  28Training neural network. Epochs trained:  29Training neural network. Epochs trained:  30Training neural network. Epochs trained:  31Training neural network. Epochs trained:  32Training neural network. Epochs trained:  33Training neural network. Epochs trained:  34Training neural network. Epochs trained:  35Training neural network. Epochs trained:  36Training neural network. Epochs trained:  37Training neural network. Epochs trained:  38Training neural network. Epochs trained:  39Training neural network. Epochs trained:  40Training neural network. Epochs trained:  41Training neural network. Epochs trained:  42Training neural network. Epochs trained:  43Training neural network. Epochs trained:  44Training neural network. Epochs trained:  45Training neural network. Epochs trained:  46Training neural network. Epochs trained:  47Training neural network. Epochs trained:  48Training neural network. Epochs trained:  49Training neural network. Epochs trained:  50Training neural network. Epochs trained:  51Training neural network. Epochs trained:  52Training neural network. Epochs trained:  53Training neural network. Epochs trained:  54Training neural network. Epochs trained:  55Training neural network. Epochs trained:  56Training neural network. Epochs trained:  57Training neural network. Epochs trained:  58Training neural network. Epochs trained:  59Training neural network. Epochs trained:  60Training neural network. Epochs trained:  61Training neural network. Epochs trained:  62Training neural network. Epochs trained:  63Training neural network. Epochs trained:  64Training neural network. Epochs trained:  65Training neural network. Epochs trained:  66Training neural network. Epochs trained:  67Training neural network. Epochs trained:  68Training neural network. Epochs trained:  69Training neural network. Epochs trained:  70Training neural network. Epochs trained:  71Training neural network. Epochs trained:  72Training neural network. Epochs trained:  73Training neural network. Epochs trained:  74Training neural network. Epochs trained:  75Training neural network. Epochs trained:  76Training neural network. Epochs trained:  77Training neural network. Epochs trained:  78Training neural network. Epochs trained:  79Training neural network. Epochs trained:  80Training neural network. Epochs trained:  81Training neural network. Epochs trained:  82Training neural network. Epochs trained:  83Training neural network. Epochs trained:  84Training neural network. Epochs trained:  85Training neural network. Epochs trained:  86Training neural network. Epochs trained:  87Training neural network. Epochs trained:  88Training neural network. Epochs trained:  89Training neural network. Epochs trained:  90Training neural network. Epochs trained:  91Training neural network. Epochs trained:  92Training neural network. Epochs trained:  93Training neural network. Epochs trained:  94Training neural network. Epochs trained:  95Training neural network. Epochs trained:  96Training neural network. Epochs trained:  97Training neural network. Epochs trained:  98Training neural network. Epochs trained:  99Training neural network. Epochs trained:  100Training neural network. Epochs trained:  101Training neural network. Epochs trained:  102Training neural network. Epochs trained:  103Training neural network. Epochs trained:  104Training neural network. Epochs trained:  105Training neural network. Epochs trained:  106Training neural network. Epochs trained:  107Training neural network. Epochs trained:  108Training neural network. Epochs trained:  109Training neural network. Epochs trained:  110Training neural network. Epochs trained:  111Training neural network. Epochs trained:  112Training neural network. Epochs trained:  113Training neural network. Epochs trained:  114Training neural network. Epochs trained:  115Training neural network. Epochs trained:  116Training neural network. Epochs trained:  117Training neural network. Epochs trained:  118Training neural network. Epochs trained:  119Training neural network. Epochs trained:  120Training neural network. Epochs trained:  121Training neural network. Epochs trained:  122Training neural network. Epochs trained:  123Training neural network. Epochs trained:  124Training neural network. Epochs trained:  125Training neural network. Epochs trained:  126Training neural network. Epochs trained:  127Training neural network. Epochs trained:  128Training neural network. Epochs trained:  129Training neural network. Epochs trained:  130Training neural network. Epochs trained:  131Training neural network. Epochs trained:  132Training neural network. Epochs trained:  133Training neural network. Epochs trained:  134Training neural network. Epochs trained:  135Training neural network. Epochs trained:  136Training neural network. Epochs trained:  137Training neural network. Epochs trained:  138Neural network successfully converged after 138 epochs.
+torch.Size([357, 1, 5])
+tensor([ 0.0015,  0.0042,  0.0053,  0.0124,  0.0181,  0.0194,  0.0205,  0.0213,
+         0.0225,  0.0185,  0.0187,  0.0124,  0.0090,  0.0117,  0.0161,  0.0183,
+         0.0192,  0.0190,  0.0182,  0.0186,  0.0218,  0.0196,  0.0205,  0.0232,
+         0.0184,  0.0239,  0.0205,  0.0280,  0.0276,  0.0228,  0.0211,  0.0191,
+         0.0311,  0.0237,  0.0235,  0.0226,  0.0275,  0.0188,  0.0172,  0.0137,
+         0.0195,  0.0203,  0.0226,  0.0217,  0.0226,  0.0250,  0.0219,  0.0165,
+         0.0193,  0.0231,  0.0239,  0.0241,  0.0216,  0.0210,  0.0259,  0.0242,
+         0.0241,  0.0248,  0.0262,  0.0268,  0.0345,  0.0310,  0.0229,  0.0173,
+         0.0197,  0.0212,  0.0279,  0.0290,  0.0284,  0.0273,  0.0247,  0.0257,
+         0.0210,  0.0232,  0.0259,  0.0256,  0.0227,  0.0261,  0.0257,  0.0280,
+         0.0268,  0.0248,  0.0229,  0.0245,  0.0305,  0.0235,  0.0228,  0.0215,
+         0.0224,  0.0251,  0.0274,  0.0333,  0.0336,  0.0281,  0.0251,  0.0230,
+         0.0294,  0.0261,  0.0251,  0.0255,  0.0268,  0.0280,  0.0210,  0.0213,
+         0.0239,  0.0229,  0.0211,  0.0209,  0.0209,  0.0278,  0.0252,  0.0253,
+         0.0267,  0.0245,  0.0218,  0.0193,  0.0254,  0.0284,  0.0283,  0.0260,
+         0.0238,  0.0241,  0.0255,  0.0271,  0.0294,  0.0275,  0.0259,  0.0306,
+         0.0076,  0.0142,  0.0175,  0.0117, -0.0013, -0.0026,  0.0153,  0.0200,
+         0.0201,  0.0185,  0.0214,  0.0193,  0.0203,  0.0218,  0.0210,  0.0220,
+         0.0260,  0.0305,  0.0335,  0.0265,  0.0232,  0.0086,  0.0159, -0.0158,
+         0.0019,  0.0130,  0.0237,  0.0272,  0.0247,  0.0199,  0.0166,  0.0151,
+         0.0192,  0.0186,  0.0199,  0.0223,  0.0125,  0.0245,  0.0218,  0.0185,
+         0.0131,  0.0108,  0.0059,  0.0141,  0.0205,  0.0070,  0.0062,  0.0061,
+         0.0164,  0.0141,  0.0195,  0.0194,  0.0220,  0.0214,  0.0180,  0.0210,
+         0.0226,  0.0119,  0.0031,  0.0245,  0.0269,  0.0123,  0.0166,  0.0242,
+         0.0148,  0.0263,  0.0248,  0.0118,  0.0241,  0.0200,  0.0110,  0.0154,
+         0.0090,  0.0285,  0.0296,  0.0267,  0.0338,  0.0369,  0.0409,  0.0471,
+         0.0357,  0.0442,  0.0540,  0.0364,  0.0435,  0.0285,  0.0333,  0.0603,
+         0.0582,  0.0452,  0.0573,  0.0770,  0.0867,  0.0941,  0.0622,  0.0858,
+         0.0971,  0.1311,  0.1492,  0.1620,  0.1161,  0.1491,  0.1461,  0.1052,
+         0.0561,  0.0524,  0.0559,  0.0851,  0.1212,  0.1674,  0.1842,  0.2324,
+         0.2595,  0.3168,  0.2747,  0.2296,  0.2113,  0.1882,  0.1660,  0.2186,
+         0.2286,  0.2691,  0.3215,  0.3525,  0.3610,  0.3798,  0.3323,  0.2683,
+         0.2290,  0.2071,  0.1852,  0.1984,  0.2371,  0.2285,  0.2264,  0.2570,
+         0.2784,  0.3194,  0.3477,  0.3317,  0.2876,  0.2376,  0.1756,  0.1926,
+         0.1596,  0.1341,  0.1237,  0.1268,  0.1497,  0.2053,  0.1519,  0.0933,
+         0.0774,  0.0643,  0.0623,  0.0999,  0.1165,  0.0805,  0.0581,  0.0559,
+         0.0314,  0.0242,  0.0180,  0.0308,  0.0430,  0.0563,  0.0665,  0.0807,
+         0.0732,  0.0913,  0.0701,  0.0425,  0.0541,  0.0418,  0.0409,  0.0672,
+         0.0662,  0.0281,  0.0226,  0.0211,  0.0209,  0.0252,  0.0181,  0.0205,
+         0.0091,  0.0124,  0.0109,  0.0178,  0.0368,  0.0263,  0.0381,  0.0384,
+         0.0519,  0.0623,  0.0533,  0.0335,  0.0429,  0.0288,  0.0456,  0.0325,
+         0.0187,  0.0170,  0.0134,  0.0110,  0.0200,  0.0073,  0.0186,  0.0338,
+         0.0187,  0.0213,  0.0213,  0.0140,  0.0143,  0.0230,  0.0185,  0.0163,
+         0.0188,  0.0157,  0.0133,  0.0116,  0.0101,  0.0143,  0.0147,  0.0196,
+         0.0195,  0.0165,  0.0203,  0.0168,  0.0243], grad_fn=<SelectBackward>)
+torch.Size([357, 1, 5])
+tensor([ 0.0031,  0.0059,  0.0066,  0.0131,  0.0184,  0.0201,  0.0210,  0.0222,
+         0.0234,  0.0190,  0.0194,  0.0132,  0.0101,  0.0126,  0.0168,  0.0189,
+         0.0197,  0.0196,  0.0188,  0.0192,  0.0225,  0.0200,  0.0212,  0.0239,
+         0.0188,  0.0241,  0.0209,  0.0284,  0.0281,  0.0236,  0.0217,  0.0198,
+         0.0314,  0.0241,  0.0239,  0.0232,  0.0279,  0.0195,  0.0172,  0.0139,
+         0.0196,  0.0207,  0.0230,  0.0229,  0.0230,  0.0254,  0.0223,  0.0168,
+         0.0198,  0.0234,  0.0244,  0.0246,  0.0220,  0.0214,  0.0267,  0.0249,
+         0.0246,  0.0254,  0.0269,  0.0276,  0.0345,  0.0315,  0.0234,  0.0176,
+         0.0198,  0.0213,  0.0280,  0.0292,  0.0283,  0.0276,  0.0250,  0.0262,
+         0.0214,  0.0237,  0.0265,  0.0263,  0.0232,  0.0269,  0.0265,  0.0287,
+         0.0274,  0.0253,  0.0233,  0.0252,  0.0311,  0.0236,  0.0232,  0.0219,
+         0.0229,  0.0257,  0.0280,  0.0336,  0.0334,  0.0287,  0.0257,  0.0235,
+         0.0297,  0.0266,  0.0255,  0.0261,  0.0272,  0.0284,  0.0214,  0.0217,
+         0.0244,  0.0235,  0.0217,  0.0213,  0.0212,  0.0285,  0.0261,  0.0259,
+         0.0273,  0.0251,  0.0225,  0.0195,  0.0261,  0.0291,  0.0288,  0.0265,
+         0.0243,  0.0247,  0.0260,  0.0276,  0.0299,  0.0279,  0.0261,  0.0301,
+         0.0070,  0.0148,  0.0173,  0.0118, -0.0019, -0.0037,  0.0149,  0.0204,
+         0.0207,  0.0193,  0.0222,  0.0199,  0.0207,  0.0224,  0.0217,  0.0227,
+         0.0265,  0.0303,  0.0339,  0.0262,  0.0234,  0.0083,  0.0153, -0.0165,
+         0.0013,  0.0123,  0.0231,  0.0269,  0.0249,  0.0207,  0.0176,  0.0161,
+         0.0203,  0.0195,  0.0208,  0.0230,  0.0136,  0.0244,  0.0223,  0.0187,
+         0.0140,  0.0128,  0.0072,  0.0148,  0.0215,  0.0074,  0.0068,  0.0062,
+         0.0156,  0.0146,  0.0199,  0.0197,  0.0225,  0.0215,  0.0185,  0.0215,
+         0.0243,  0.0150,  0.0062,  0.0242,  0.0257,  0.0127,  0.0165,  0.0245,
+         0.0160,  0.0272,  0.0252,  0.0132,  0.0245,  0.0197,  0.0117,  0.0153,
+         0.0091,  0.0279,  0.0286,  0.0257,  0.0331,  0.0362,  0.0404,  0.0446,
+         0.0355,  0.0406,  0.0489,  0.0342,  0.0413,  0.0306,  0.0332,  0.0560,
+         0.0536,  0.0416,  0.0531,  0.0695,  0.0768,  0.0848,  0.0582,  0.0799,
+         0.0889,  0.1199,  0.1350,  0.1454,  0.1039,  0.1410,  0.1408,  0.1051,
+         0.0621,  0.0512,  0.0519,  0.0799,  0.1109,  0.1504,  0.1625,  0.2137,
+         0.2445,  0.3057,  0.2683,  0.2134,  0.1892,  0.1890,  0.1691,  0.2157,
+         0.2117,  0.2455,  0.2837,  0.3295,  0.3314,  0.3491,  0.3220,  0.2686,
+         0.2304,  0.2105,  0.1926,  0.2082,  0.2526,  0.2456,  0.2428,  0.2695,
+         0.2838,  0.3136,  0.3383,  0.3259,  0.2897,  0.2438,  0.1825,  0.1961,
+         0.1621,  0.1379,  0.1316,  0.1362,  0.1645,  0.2198,  0.1798,  0.1281,
+         0.1079,  0.0878,  0.0808,  0.1184,  0.1304,  0.0911,  0.0668,  0.0655,
+         0.0395,  0.0281,  0.0230,  0.0378,  0.0531,  0.0689,  0.0766,  0.0901,
+         0.0851,  0.0996,  0.0792,  0.0545,  0.0638,  0.0516,  0.0499,  0.0764,
+         0.0746,  0.0371,  0.0289,  0.0271,  0.0282,  0.0314,  0.0220,  0.0221,
+         0.0112,  0.0145,  0.0152,  0.0215,  0.0394,  0.0307,  0.0421,  0.0408,
+         0.0559,  0.0666,  0.0555,  0.0351,  0.0461,  0.0314,  0.0482,  0.0354,
+         0.0203,  0.0184,  0.0164,  0.0137,  0.0225,  0.0095,  0.0211,  0.0366,
+         0.0218,  0.0228,  0.0235,  0.0169,  0.0167,  0.0249,  0.0207,  0.0189,
+         0.0206,  0.0177,  0.0157,  0.0137,  0.0115,  0.0152,  0.0154,  0.0205,
+         0.0204,  0.0170,  0.0212,  0.0182,  0.0257], grad_fn=<SelectBackward>)

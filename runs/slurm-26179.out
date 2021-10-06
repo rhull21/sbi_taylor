@@ -1,0 +1,19 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 12963it [00:00, 462871.71it/s]          
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/posteriorsamputils.py:96: RuntimeWarning: Mean of empty slice.
+  log_prob_true_thetas_ind[i] = np.take(log_probability, theta_idx)[0].mean()
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/numpy/core/_methods.py:188: RuntimeWarning: invalid value encountered in true_divide
+  ret = ret.dtype.type(ret / rcount)
+warning: file exists
+warning: file exists
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 339, in <module>
+    log_prob_true_thetas_ind, log_prob_true_thetas_all, log_prob_true_thetas_flag = genProbThetas(params_true_scaled=true_theta,
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/posteriorsamputils.py", line 115, in genProbThetas
+    log_prob_true_thetas_all = convertNumpy(log_prob_true_thetas_all, toTorch=True)
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/genutils.py", line 118, in convertNumpy
+    data_arr = torch.from_numpy(data_arr)
+TypeError: expected np.ndarray (got numpy.float32)

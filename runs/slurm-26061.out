@@ -1,0 +1,11 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/lstmutils.py:177: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_window[f'AOC_{l}'] = AOC_scale[l]
+warning: file exists
+saving
+09_04_test_00

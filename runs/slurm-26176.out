@@ -1,0 +1,10 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 12996it [00:00, 321483.74it/s]          
+warning: file exists
+warning: file exists
+<class 'torch.Tensor'>
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>

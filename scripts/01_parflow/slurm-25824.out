@@ -1,4 +1,0 @@
-Loading parflow-ml/latest
-  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
-Error Reading Header: Success
-/var/spool/slurmd/job25824/slurm_script: line 10: 1089409 Segmentation fault      (core dumped) python PARFLOW_Taylor_run.py

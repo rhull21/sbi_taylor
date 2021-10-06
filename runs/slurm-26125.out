@@ -1,0 +1,15 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+No valid summary stats passed
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 141, in <module>
+    unique_series = createYHatList(DataY_test, series_len, num_unique,
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/sbiutils.py", line 136, in createYHatList
+    y_hat_out = createYHat(y_hat, stat_method, stat_typ=stat_typ, embed_type=embed_type)
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/sbiutils.py", line 121, in createYHat
+    stat_test = setStatSim(y_hat, stat_typ)
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/summaryutils.py", line 123, in setStatSim
+    for stat in stat_typ:
+TypeError: 'NoneType' object is not iterable

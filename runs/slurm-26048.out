@@ -1,0 +1,21 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/lstmutils.py:177: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_window[f'AOC_{l}'] = AOC_scale[l]
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/lstmutils.py:179: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_window['Y'] = data[member_name]
+torch.Size([7497, 1])
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 62, in <module>
+    buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_name, ensemble_path)
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/03_sbi_lstm/lstm_build.py", line 116, in buildLSTM
+    series_len = seriesLength(dataY_test, member_num_test)
+NameError: name 'member_num_test' is not defined

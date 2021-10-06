@@ -1,0 +1,22 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/sbiutils.py:110: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(y_out)
+Running 1000 simulations.:   0%|          | 0/1000 [00:00<?, ?it/s]Running 1000 simulations.:   6%|▌         | 55/1000 [00:00<00:01, 545.34it/s]Running 1000 simulations.:  11%|█         | 110/1000 [00:00<00:01, 544.64it/s]Running 1000 simulations.:  16%|█▋        | 165/1000 [00:00<00:01, 544.12it/s]Running 1000 simulations.:  22%|██▏       | 220/1000 [00:00<00:01, 543.45it/s]Running 1000 simulations.:  28%|██▊       | 275/1000 [00:00<00:01, 542.87it/s]Running 1000 simulations.:  33%|███▎      | 330/1000 [00:00<00:01, 542.34it/s]Running 1000 simulations.:  38%|███▊      | 385/1000 [00:00<00:01, 543.31it/s]Running 1000 simulations.:  44%|████▍     | 440/1000 [00:00<00:01, 545.11it/s]Running 1000 simulations.:  50%|████▉     | 495/1000 [00:00<00:00, 544.27it/s]Running 1000 simulations.:  55%|█████▌    | 551/1000 [00:01<00:00, 546.19it/s]Running 1000 simulations.:  60%|██████    | 605/1000 [00:01<00:00, 543.30it/s]Running 1000 simulations.:  66%|██████▌   | 660/1000 [00:01<00:00, 544.60it/s]Running 1000 simulations.:  72%|███████▏  | 715/1000 [00:01<00:00, 544.05it/s]Running 1000 simulations.:  77%|███████▋  | 770/1000 [00:01<00:00, 543.23it/s]Running 1000 simulations.:  82%|████████▎ | 825/1000 [00:01<00:00, 544.24it/s]Running 1000 simulations.:  88%|████████▊ | 880/1000 [00:01<00:00, 544.48it/s]Running 1000 simulations.:  94%|█████████▎| 935/1000 [00:01<00:00, 544.38it/s]Running 1000 simulations.:  99%|█████████▉| 990/1000 [00:01<00:00, 544.71it/s]Running 1000 simulations.: 100%|██████████| 1000/1000 [00:01<00:00, 544.00it/s]
+Invalid combo of null and non-null values passed
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 220, in <module>
+    posterior, end_time = buildPosterior(prior_type, prior_arg1, prior_arg2, num_dim,
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/03_sbi_lstm/sbi_build.py", line 146, in buildPosterior
+    density_estimator = inference.append_simulations(theta, x).train()
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/inference/snpe/snpe_c.py", line 187, in train
+    return super().train(**kwargs)
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/inference/snpe/snpe_base.py", line 246, in train
+    self._neural_net = self._build_neural_net(
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/utils/get_nn_models.py", line 245, in build_fn
+    return build_maf(batch_x=batch_theta, batch_y=batch_x, **kwargs)
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/neural_nets/flow.py", line 105, in build_maf
+    y_numel = embedding_net(batch_y[:1]).numel()
+TypeError: 'NoneType' object is not callable

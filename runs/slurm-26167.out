@@ -1,0 +1,9 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+warning: file exists
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 260, in <module>
+    with open(f"{sbi_dir}num_unique.pkl", "rb") as fp:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/qh8373/SBI_TAYLOR/data/05_sbi_out/0626_01_09_04_test_09_09_attempt1_embed_MLP_2/num_unique.pkl'

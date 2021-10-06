@@ -1,0 +1,13 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+Error opening file: "/scratch/taylor/ensembles_sbi/02_PARFLOW_OUT/02_PARFLOW_OUT/0819_01_K-0.001-M-1e-07-_1995/slope_x.pfb": No such file or directory
+Error opening file: "/scratch/taylor/ensembles_sbi/02_PARFLOW_OUT/02_PARFLOW_OUT/0819_01_K-0.001-M-1e-07-_1995/slope_y.pfb": No such file or directory
+Error opening file: "/scratch/taylor/ensembles_sbi/02_PARFLOW_OUT/02_PARFLOW_OUT/0819_01_K-0.001-M-1e-07-_1995/Taylor_1995.out.press.00000.pfb": No such file or directory
+Traceback (most recent call last):
+  File "PARFLOW_Read_Gage_Dynamic.py", line 163, in <module>
+    streamflow = calculate_overland_flow_grid(pressure=pressure, slopex=slope_x, slopey=slope_y,
+  File "/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/parflow/tools/hydrology.py", line 346, in calculate_overland_flow_grid
+    qeast, qnorth = calculate_overland_fluxes(pressure, slopex, slopey, mannings, dx, dy, flow_method=flow_method,
+  File "/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/parflow/tools/hydrology.py", line 297, in calculate_overland_fluxes
+    if slopex.ndim == 3:
+AttributeError: 'NoneType' object has no attribute 'ndim'

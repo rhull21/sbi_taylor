@@ -1,0 +1,781 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/lstmutils.py:177: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_window[f'AOC_{l}'] = AOC_scale[l]
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/lstmutils.py:179: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_window['Y'] = data[member_name]
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+The PostScript backend does not support transparency; partially transparent artists will be rendered opaque.
+saving
+09_04_test_validation_00
+Epoch: 0, training loss: 0.03503
+Epoch: 0, validation loss: 0.01072
+Epoch: 1, training loss: 0.00924
+Epoch: 1, validation loss: 0.01005
+Epoch: 2, training loss: 0.00870
+Epoch: 2, validation loss: 0.00963
+Epoch: 3, training loss: 0.00843
+Epoch: 3, validation loss: 0.00939
+Epoch: 4, training loss: 0.00826
+Epoch: 4, validation loss: 0.00922
+Epoch: 5, training loss: 0.00813
+Epoch: 5, validation loss: 0.00909
+Epoch: 6, training loss: 0.00801
+Epoch: 6, validation loss: 0.00898
+Epoch: 7, training loss: 0.00791
+Epoch: 7, validation loss: 0.00887
+Epoch: 8, training loss: 0.00781
+Epoch: 8, validation loss: 0.00876
+Epoch: 9, training loss: 0.00772
+Epoch: 9, validation loss: 0.00866
+Epoch: 10, training loss: 0.00763
+Epoch: 10, validation loss: 0.00854
+Epoch: 11, training loss: 0.00753
+Epoch: 11, validation loss: 0.00842
+Epoch: 12, training loss: 0.00742
+Epoch: 12, validation loss: 0.00828
+Epoch: 13, training loss: 0.00729
+Epoch: 13, validation loss: 0.00809
+Epoch: 14, training loss: 0.00709
+Epoch: 14, validation loss: 0.00777
+Epoch: 15, training loss: 0.00672
+Epoch: 15, validation loss: 0.00715
+Epoch: 16, training loss: 0.00606
+Epoch: 16, validation loss: 0.00631
+Epoch: 17, training loss: 0.00545
+Epoch: 17, validation loss: 0.00561
+Epoch: 18, training loss: 0.00501
+Epoch: 18, validation loss: 0.00508
+Epoch: 19, training loss: 0.00464
+Epoch: 19, validation loss: 0.00467
+Epoch: 20, training loss: 0.00435
+Epoch: 20, validation loss: 0.00440
+Epoch: 21, training loss: 0.00410
+Epoch: 21, validation loss: 0.00424
+Epoch: 22, training loss: 0.00388
+Epoch: 22, validation loss: 0.00417
+Epoch: 23, training loss: 0.00369
+Epoch: 23, validation loss: 0.00413
+Epoch: 24, training loss: 0.00356
+Epoch: 24, validation loss: 0.00405
+Epoch: 25, training loss: 0.00346
+Epoch: 25, validation loss: 0.00391
+Epoch: 26, training loss: 0.00338
+Epoch: 26, validation loss: 0.00375
+Epoch: 27, training loss: 0.00330
+Epoch: 27, validation loss: 0.00360
+Epoch: 28, training loss: 0.00323
+Epoch: 28, validation loss: 0.00348
+Epoch: 29, training loss: 0.00317
+Epoch: 29, validation loss: 0.00339
+Epoch: 30, training loss: 0.00312
+Epoch: 30, validation loss: 0.00332
+Epoch: 31, training loss: 0.00308
+Epoch: 31, validation loss: 0.00327
+Epoch: 32, training loss: 0.00305
+Epoch: 32, validation loss: 0.00323
+Epoch: 33, training loss: 0.00303
+Epoch: 33, validation loss: 0.00320
+Epoch: 34, training loss: 0.00300
+Epoch: 34, validation loss: 0.00317
+Epoch: 35, training loss: 0.00298
+Epoch: 35, validation loss: 0.00316
+Epoch: 36, training loss: 0.00296
+Epoch: 36, validation loss: 0.00314
+Epoch: 37, training loss: 0.00295
+Epoch: 37, validation loss: 0.00313
+Epoch: 38, training loss: 0.00293
+Epoch: 38, validation loss: 0.00312
+Epoch: 39, training loss: 0.00291
+Epoch: 39, validation loss: 0.00312
+Epoch: 40, training loss: 0.00290
+Epoch: 40, validation loss: 0.00311
+Epoch: 41, training loss: 0.00288
+Epoch: 41, validation loss: 0.00311
+Epoch: 42, training loss: 0.00287
+Epoch: 42, validation loss: 0.00312
+Epoch: 43, training loss: 0.00286
+Epoch: 43, validation loss: 0.00312
+Epoch: 44, training loss: 0.00285
+Epoch: 44, validation loss: 0.00313
+Epoch: 45, training loss: 0.00284
+Epoch: 45, validation loss: 0.00314
+Epoch: 46, training loss: 0.00283
+Epoch: 46, validation loss: 0.00315
+Epoch: 47, training loss: 0.00282
+Epoch: 47, validation loss: 0.00316
+Epoch: 48, training loss: 0.00281
+Epoch: 48, validation loss: 0.00317
+Epoch: 49, training loss: 0.00280
+Epoch: 49, validation loss: 0.00318
+Epoch: 50, training loss: 0.00280
+Epoch: 50, validation loss: 0.00320
+Epoch: 51, training loss: 0.00279
+Epoch: 51, validation loss: 0.00321
+Epoch: 52, training loss: 0.00278
+Epoch: 52, validation loss: 0.00322
+Epoch: 53, training loss: 0.00278
+Epoch: 53, validation loss: 0.00323
+Epoch: 54, training loss: 0.00277
+Epoch: 54, validation loss: 0.00324
+Epoch: 55, training loss: 0.00277
+Epoch: 55, validation loss: 0.00325
+Epoch: 56, training loss: 0.00276
+Epoch: 56, validation loss: 0.00326
+Epoch: 57, training loss: 0.00276
+Epoch: 57, validation loss: 0.00327
+Epoch: 58, training loss: 0.00275
+Epoch: 58, validation loss: 0.00328
+Epoch: 59, training loss: 0.00275
+Epoch: 59, validation loss: 0.00328
+Epoch: 60, training loss: 0.00274
+Epoch: 60, validation loss: 0.00328
+Epoch: 61, training loss: 0.00274
+Epoch: 61, validation loss: 0.00329
+Epoch: 62, training loss: 0.00273
+Epoch: 62, validation loss: 0.00329
+Epoch: 63, training loss: 0.00273
+Epoch: 63, validation loss: 0.00328
+Epoch: 64, training loss: 0.00272
+Epoch: 64, validation loss: 0.00328
+Epoch: 65, training loss: 0.00272
+Epoch: 65, validation loss: 0.00328
+Epoch: 66, training loss: 0.00271
+Epoch: 66, validation loss: 0.00327
+Epoch: 67, training loss: 0.00271
+Epoch: 67, validation loss: 0.00327
+Epoch: 68, training loss: 0.00270
+Epoch: 68, validation loss: 0.00326
+Epoch: 69, training loss: 0.00269
+Epoch: 69, validation loss: 0.00325
+Epoch: 70, training loss: 0.00269
+Epoch: 70, validation loss: 0.00324
+Epoch: 71, training loss: 0.00268
+Epoch: 71, validation loss: 0.00323
+Epoch: 72, training loss: 0.00267
+Epoch: 72, validation loss: 0.00322
+Epoch: 73, training loss: 0.00266
+Epoch: 73, validation loss: 0.00320
+Epoch: 74, training loss: 0.00265
+Epoch: 74, validation loss: 0.00319
+Epoch: 75, training loss: 0.00264
+Epoch: 75, validation loss: 0.00317
+Epoch: 76, training loss: 0.00263
+Epoch: 76, validation loss: 0.00316
+Epoch: 77, training loss: 0.00261
+Epoch: 77, validation loss: 0.00314
+Epoch: 78, training loss: 0.00260
+Epoch: 78, validation loss: 0.00313
+Epoch: 79, training loss: 0.00259
+Epoch: 79, validation loss: 0.00311
+Epoch: 80, training loss: 0.00258
+Epoch: 80, validation loss: 0.00310
+Epoch: 81, training loss: 0.00257
+Epoch: 81, validation loss: 0.00309
+Epoch: 82, training loss: 0.00256
+Epoch: 82, validation loss: 0.00307
+Epoch: 83, training loss: 0.00254
+Epoch: 83, validation loss: 0.00306
+Epoch: 84, training loss: 0.00253
+Epoch: 84, validation loss: 0.00305
+Epoch: 85, training loss: 0.00252
+Epoch: 85, validation loss: 0.00303
+Epoch: 86, training loss: 0.00251
+Epoch: 86, validation loss: 0.00302
+Epoch: 87, training loss: 0.00250
+Epoch: 87, validation loss: 0.00301
+Epoch: 88, training loss: 0.00249
+Epoch: 88, validation loss: 0.00300
+Epoch: 89, training loss: 0.00248
+Epoch: 89, validation loss: 0.00298
+Epoch: 90, training loss: 0.00246
+Epoch: 90, validation loss: 0.00297
+Epoch: 91, training loss: 0.00245
+Epoch: 91, validation loss: 0.00296
+Epoch: 92, training loss: 0.00244
+Epoch: 92, validation loss: 0.00295
+Epoch: 93, training loss: 0.00243
+Epoch: 93, validation loss: 0.00294
+Epoch: 94, training loss: 0.00242
+Epoch: 94, validation loss: 0.00293
+Epoch: 95, training loss: 0.00241
+Epoch: 95, validation loss: 0.00292
+Epoch: 96, training loss: 0.00240
+Epoch: 96, validation loss: 0.00291
+Epoch: 97, training loss: 0.00239
+Epoch: 97, validation loss: 0.00290
+Epoch: 98, training loss: 0.00238
+Epoch: 98, validation loss: 0.00289
+Epoch: 99, training loss: 0.00237
+Epoch: 99, validation loss: 0.00288
+Epoch: 100, training loss: 0.00236
+Epoch: 100, validation loss: 0.00287
+Epoch: 101, training loss: 0.00235
+Epoch: 101, validation loss: 0.00286
+Epoch: 102, training loss: 0.00234
+Epoch: 102, validation loss: 0.00285
+Epoch: 103, training loss: 0.00233
+Epoch: 103, validation loss: 0.00284
+Epoch: 104, training loss: 0.00232
+Epoch: 104, validation loss: 0.00283
+Epoch: 105, training loss: 0.00232
+Epoch: 105, validation loss: 0.00282
+Epoch: 106, training loss: 0.00231
+Epoch: 106, validation loss: 0.00281
+Epoch: 107, training loss: 0.00230
+Epoch: 107, validation loss: 0.00280
+Epoch: 108, training loss: 0.00229
+Epoch: 108, validation loss: 0.00280
+Epoch: 109, training loss: 0.00229
+Epoch: 109, validation loss: 0.00279
+Epoch: 110, training loss: 0.00228
+Epoch: 110, validation loss: 0.00278
+Epoch: 111, training loss: 0.00227
+Epoch: 111, validation loss: 0.00277
+Epoch: 112, training loss: 0.00227
+Epoch: 112, validation loss: 0.00276
+Epoch: 113, training loss: 0.00226
+Epoch: 113, validation loss: 0.00275
+Epoch: 114, training loss: 0.00225
+Epoch: 114, validation loss: 0.00274
+Epoch: 115, training loss: 0.00225
+Epoch: 115, validation loss: 0.00273
+Epoch: 116, training loss: 0.00224
+Epoch: 116, validation loss: 0.00272
+Epoch: 117, training loss: 0.00223
+Epoch: 117, validation loss: 0.00270
+Epoch: 118, training loss: 0.00223
+Epoch: 118, validation loss: 0.00269
+Epoch: 119, training loss: 0.00222
+Epoch: 119, validation loss: 0.00267
+Epoch: 120, training loss: 0.00221
+Epoch: 120, validation loss: 0.00266
+Epoch: 121, training loss: 0.00220
+Epoch: 121, validation loss: 0.00264
+Epoch: 122, training loss: 0.00220
+Epoch: 122, validation loss: 0.00262
+Epoch: 123, training loss: 0.00219
+Epoch: 123, validation loss: 0.00260
+Epoch: 124, training loss: 0.00218
+Epoch: 124, validation loss: 0.00258
+Epoch: 125, training loss: 0.00216
+Epoch: 125, validation loss: 0.00255
+Epoch: 126, training loss: 0.00215
+Epoch: 126, validation loss: 0.00253
+Epoch: 127, training loss: 0.00213
+Epoch: 127, validation loss: 0.00250
+Epoch: 128, training loss: 0.00211
+Epoch: 128, validation loss: 0.00247
+Epoch: 129, training loss: 0.00208
+Epoch: 129, validation loss: 0.00245
+Epoch: 130, training loss: 0.00206
+Epoch: 130, validation loss: 0.00242
+Epoch: 131, training loss: 0.00203
+Epoch: 131, validation loss: 0.00238
+Epoch: 132, training loss: 0.00200
+Epoch: 132, validation loss: 0.00233
+Epoch: 133, training loss: 0.00198
+Epoch: 133, validation loss: 0.00232
+Epoch: 134, training loss: 0.00199
+Epoch: 134, validation loss: 0.00234
+Epoch: 135, training loss: 0.00201
+Epoch: 135, validation loss: 0.00226
+Epoch: 136, training loss: 0.00190
+Epoch: 136, validation loss: 0.00226
+Epoch: 137, training loss: 0.00189
+Epoch: 137, validation loss: 0.00222
+Epoch: 138, training loss: 0.00188
+Epoch: 138, validation loss: 0.00219
+Epoch: 139, training loss: 0.00192
+Epoch: 139, validation loss: 0.00225
+Epoch: 140, training loss: 0.00186
+Epoch: 140, validation loss: 0.00219
+Epoch: 141, training loss: 0.00186
+Epoch: 141, validation loss: 0.00219
+Epoch: 142, training loss: 0.00182
+Epoch: 142, validation loss: 0.00216
+Epoch: 143, training loss: 0.00182
+Epoch: 143, validation loss: 0.00215
+Epoch: 144, training loss: 0.00179
+Epoch: 144, validation loss: 0.00212
+Epoch: 145, training loss: 0.00178
+Epoch: 145, validation loss: 0.00210
+Epoch: 146, training loss: 0.00175
+Epoch: 146, validation loss: 0.00208
+Epoch: 147, training loss: 0.00174
+Epoch: 147, validation loss: 0.00206
+Epoch: 148, training loss: 0.00172
+Epoch: 148, validation loss: 0.00205
+Epoch: 149, training loss: 0.00170
+Epoch: 149, validation loss: 0.00203
+Epoch: 150, training loss: 0.00169
+Epoch: 150, validation loss: 0.00202
+Epoch: 151, training loss: 0.00168
+Epoch: 151, validation loss: 0.00201
+Epoch: 152, training loss: 0.00167
+Epoch: 152, validation loss: 0.00200
+Epoch: 153, training loss: 0.00166
+Epoch: 153, validation loss: 0.00199
+Epoch: 154, training loss: 0.00165
+Epoch: 154, validation loss: 0.00198
+Epoch: 155, training loss: 0.00164
+Epoch: 155, validation loss: 0.00197
+Epoch: 156, training loss: 0.00164
+Epoch: 156, validation loss: 0.00196
+Epoch: 157, training loss: 0.00164
+Epoch: 157, validation loss: 0.00195
+Epoch: 158, training loss: 0.00163
+Epoch: 158, validation loss: 0.00195
+Epoch: 159, training loss: 0.00163
+Epoch: 159, validation loss: 0.00194
+Epoch: 160, training loss: 0.00162
+Epoch: 160, validation loss: 0.00193
+Epoch: 161, training loss: 0.00162
+Epoch: 161, validation loss: 0.00193
+Epoch: 162, training loss: 0.00161
+Epoch: 162, validation loss: 0.00192
+Epoch: 163, training loss: 0.00161
+Epoch: 163, validation loss: 0.00192
+Epoch: 164, training loss: 0.00160
+Epoch: 164, validation loss: 0.00192
+Epoch: 165, training loss: 0.00159
+Epoch: 165, validation loss: 0.00192
+Epoch: 166, training loss: 0.00158
+Epoch: 166, validation loss: 0.00191
+Epoch: 167, training loss: 0.00158
+Epoch: 167, validation loss: 0.00191
+Epoch: 168, training loss: 0.00157
+Epoch: 168, validation loss: 0.00191
+Epoch: 169, training loss: 0.00157
+Epoch: 169, validation loss: 0.00191
+Epoch: 170, training loss: 0.00156
+Epoch: 170, validation loss: 0.00190
+Epoch: 171, training loss: 0.00156
+Epoch: 171, validation loss: 0.00190
+Epoch: 172, training loss: 0.00155
+Epoch: 172, validation loss: 0.00189
+Epoch: 173, training loss: 0.00155
+Epoch: 173, validation loss: 0.00189
+Epoch: 174, training loss: 0.00154
+Epoch: 174, validation loss: 0.00189
+Epoch: 175, training loss: 0.00154
+Epoch: 175, validation loss: 0.00188
+Epoch: 176, training loss: 0.00154
+Epoch: 176, validation loss: 0.00188
+Epoch: 177, training loss: 0.00153
+Epoch: 177, validation loss: 0.00188
+Epoch: 178, training loss: 0.00153
+Epoch: 178, validation loss: 0.00188
+Epoch: 179, training loss: 0.00152
+Epoch: 179, validation loss: 0.00189
+Epoch: 180, training loss: 0.00152
+Epoch: 180, validation loss: 0.00188
+Epoch: 181, training loss: 0.00151
+Epoch: 181, validation loss: 0.00190
+Epoch: 182, training loss: 0.00151
+Epoch: 182, validation loss: 0.00186
+Epoch: 183, training loss: 0.00153
+Epoch: 183, validation loss: 0.00189
+Epoch: 184, training loss: 0.00153
+Epoch: 184, validation loss: 0.00180
+Epoch: 185, training loss: 0.00261
+Epoch: 185, validation loss: 0.00224
+Epoch: 186, training loss: 0.00165
+Epoch: 186, validation loss: 0.00185
+Epoch: 187, training loss: 0.00157
+Epoch: 187, validation loss: 0.00185
+Epoch: 188, training loss: 0.00158
+Epoch: 188, validation loss: 0.00184
+Epoch: 189, training loss: 0.00157
+Epoch: 189, validation loss: 0.00183
+Epoch: 190, training loss: 0.00155
+Epoch: 190, validation loss: 0.00182
+Epoch: 191, training loss: 0.00154
+Epoch: 191, validation loss: 0.00182
+Epoch: 192, training loss: 0.00153
+Epoch: 192, validation loss: 0.00181
+Epoch: 193, training loss: 0.00153
+Epoch: 193, validation loss: 0.00181
+Epoch: 194, training loss: 0.00152
+Epoch: 194, validation loss: 0.00181
+Epoch: 195, training loss: 0.00152
+Epoch: 195, validation loss: 0.00181
+Epoch: 196, training loss: 0.00152
+Epoch: 196, validation loss: 0.00181
+Epoch: 197, training loss: 0.00152
+Epoch: 197, validation loss: 0.00182
+Epoch: 198, training loss: 0.00152
+Epoch: 198, validation loss: 0.00182
+Epoch: 199, training loss: 0.00152
+Epoch: 199, validation loss: 0.00183
+Epoch: 200, training loss: 0.00151
+Epoch: 200, validation loss: 0.00184
+Epoch: 201, training loss: 0.00151
+Epoch: 201, validation loss: 0.00184
+Epoch: 202, training loss: 0.00150
+Epoch: 202, validation loss: 0.00183
+Epoch: 203, training loss: 0.00149
+Epoch: 203, validation loss: 0.00183
+Epoch: 204, training loss: 0.00148
+Epoch: 204, validation loss: 0.00183
+Epoch: 205, training loss: 0.00147
+Epoch: 205, validation loss: 0.00182
+Epoch: 206, training loss: 0.00147
+Epoch: 206, validation loss: 0.00182
+Epoch: 207, training loss: 0.00146
+Epoch: 207, validation loss: 0.00182
+Epoch: 208, training loss: 0.00146
+Epoch: 208, validation loss: 0.00180
+Epoch: 209, training loss: 0.00168
+Epoch: 209, validation loss: 0.00192
+Epoch: 210, training loss: 0.00154
+Epoch: 210, validation loss: 0.00184
+Epoch: 211, training loss: 0.00143
+Epoch: 211, validation loss: 0.00185
+Epoch: 212, training loss: 0.00143
+Epoch: 212, validation loss: 0.00185
+Epoch: 213, training loss: 0.00142
+Epoch: 213, validation loss: 0.00184
+Epoch: 214, training loss: 0.00141
+Epoch: 214, validation loss: 0.00183
+Epoch: 215, training loss: 0.00140
+Epoch: 215, validation loss: 0.00183
+Epoch: 216, training loss: 0.00139
+Epoch: 216, validation loss: 0.00182
+Epoch: 217, training loss: 0.00140
+Epoch: 217, validation loss: 0.00181
+Epoch: 218, training loss: 0.00144
+Epoch: 218, validation loss: 0.00180
+Epoch: 219, training loss: 0.00145
+Epoch: 219, validation loss: 0.00178
+Epoch: 220, training loss: 0.00143
+Epoch: 220, validation loss: 0.00181
+Epoch: 221, training loss: 0.00146
+Epoch: 221, validation loss: 0.00180
+Epoch: 222, training loss: 0.00159
+Epoch: 222, validation loss: 0.00187
+Epoch: 223, training loss: 0.00151
+Epoch: 223, validation loss: 0.00185
+Epoch: 224, training loss: 0.00141
+Epoch: 224, validation loss: 0.00184
+Epoch: 225, training loss: 0.00142
+Epoch: 225, validation loss: 0.00185
+Epoch: 226, training loss: 0.00141
+Epoch: 226, validation loss: 0.00184
+Epoch: 227, training loss: 0.00140
+Epoch: 227, validation loss: 0.00183
+Epoch: 228, training loss: 0.00142
+Epoch: 228, validation loss: 0.00184
+Epoch: 229, training loss: 0.00164
+Epoch: 229, validation loss: 0.00190
+Epoch: 230, training loss: 0.00142
+Epoch: 230, validation loss: 0.00184
+Epoch: 231, training loss: 0.00141
+Epoch: 231, validation loss: 0.00184
+Epoch: 232, training loss: 0.00142
+Epoch: 232, validation loss: 0.00185
+Epoch: 233, training loss: 0.00141
+Epoch: 233, validation loss: 0.00185
+Epoch: 234, training loss: 0.00142
+Epoch: 234, validation loss: 0.00185
+Epoch: 235, training loss: 0.00139
+Epoch: 235, validation loss: 0.00184
+Epoch: 236, training loss: 0.00142
+Epoch: 236, validation loss: 0.00185
+Epoch: 237, training loss: 0.00173
+Epoch: 237, validation loss: 0.00192
+Epoch: 238, training loss: 0.00139
+Epoch: 238, validation loss: 0.00187
+Epoch: 239, training loss: 0.00134
+Epoch: 239, validation loss: 0.00184
+Epoch: 240, training loss: 0.00136
+Epoch: 240, validation loss: 0.00185
+Epoch: 241, training loss: 0.00136
+Epoch: 241, validation loss: 0.00185
+Epoch: 242, training loss: 0.00137
+Epoch: 242, validation loss: 0.00184
+Epoch: 243, training loss: 0.00135
+Epoch: 243, validation loss: 0.00184
+Epoch: 244, training loss: 0.00135
+Epoch: 244, validation loss: 0.00183
+Epoch: 245, training loss: 0.00133
+Epoch: 245, validation loss: 0.00181
+Epoch: 246, training loss: 0.00133
+Epoch: 246, validation loss: 0.00181
+Epoch: 247, training loss: 0.00129
+Epoch: 247, validation loss: 0.00177
+Epoch: 248, training loss: 0.00132
+Epoch: 248, validation loss: 0.00179
+Epoch: 249, training loss: 0.00161
+Epoch: 249, validation loss: 0.00178
+Epoch: 250, training loss: 0.00132
+Epoch: 250, validation loss: 0.00179
+Epoch: 251, training loss: 0.00126
+Epoch: 251, validation loss: 0.00178
+Epoch: 252, training loss: 0.00127
+Epoch: 252, validation loss: 0.00176
+Epoch: 253, training loss: 0.00128
+Epoch: 253, validation loss: 0.00175
+Epoch: 254, training loss: 0.00130
+Epoch: 254, validation loss: 0.00177
+Epoch: 255, training loss: 0.00130
+Epoch: 255, validation loss: 0.00176
+Epoch: 256, training loss: 0.00130
+Epoch: 256, validation loss: 0.00178
+Epoch: 257, training loss: 0.00130
+Epoch: 257, validation loss: 0.00175
+Epoch: 258, training loss: 0.00173
+Epoch: 258, validation loss: 0.00174
+Epoch: 259, training loss: 0.00129
+Epoch: 259, validation loss: 0.00176
+Epoch: 260, training loss: 0.00124
+Epoch: 260, validation loss: 0.00175
+Epoch: 261, training loss: 0.00123
+Epoch: 261, validation loss: 0.00174
+Epoch: 262, training loss: 0.00125
+Epoch: 262, validation loss: 0.00172
+Epoch: 263, training loss: 0.00127
+Epoch: 263, validation loss: 0.00174
+Epoch: 264, training loss: 0.00128
+Epoch: 264, validation loss: 0.00175
+Epoch: 265, training loss: 0.00128
+Epoch: 265, validation loss: 0.00174
+Epoch: 266, training loss: 0.00128
+Epoch: 266, validation loss: 0.00174
+Epoch: 267, training loss: 0.00128
+Epoch: 267, validation loss: 0.00174
+Epoch: 268, training loss: 0.00127
+Epoch: 268, validation loss: 0.00174
+Epoch: 269, training loss: 0.00128
+Epoch: 269, validation loss: 0.00175
+Epoch: 270, training loss: 0.00128
+Epoch: 270, validation loss: 0.00174
+Epoch: 271, training loss: 0.00128
+Epoch: 271, validation loss: 0.00174
+Epoch: 272, training loss: 0.00124
+Epoch: 272, validation loss: 0.00172
+Epoch: 273, training loss: 0.00125
+Epoch: 273, validation loss: 0.00173
+Epoch: 274, training loss: 0.00126
+Epoch: 274, validation loss: 0.00173
+Epoch: 275, training loss: 0.00129
+Epoch: 275, validation loss: 0.00176
+Epoch: 276, training loss: 0.00205
+Epoch: 276, validation loss: 0.00172
+Epoch: 277, training loss: 0.00129
+Epoch: 277, validation loss: 0.00174
+Epoch: 278, training loss: 0.00122
+Epoch: 278, validation loss: 0.00171
+Epoch: 279, training loss: 0.00121
+Epoch: 279, validation loss: 0.00172
+Epoch: 280, training loss: 0.00122
+Epoch: 280, validation loss: 0.00173
+Epoch: 281, training loss: 0.00124
+Epoch: 281, validation loss: 0.00174
+Epoch: 282, training loss: 0.00125
+Epoch: 282, validation loss: 0.00175
+Epoch: 283, training loss: 0.00125
+Epoch: 283, validation loss: 0.00176
+Epoch: 284, training loss: 0.00126
+Epoch: 284, validation loss: 0.00177
+Epoch: 285, training loss: 0.00127
+Epoch: 285, validation loss: 0.00177
+Epoch: 286, training loss: 0.00126
+Epoch: 286, validation loss: 0.00175
+Epoch: 287, training loss: 0.00127
+Epoch: 287, validation loss: 0.00178
+Epoch: 288, training loss: 0.00124
+Epoch: 288, validation loss: 0.00174
+Epoch: 289, training loss: 0.00125
+Epoch: 289, validation loss: 0.00177
+Epoch: 290, training loss: 0.00125
+Epoch: 290, validation loss: 0.00177
+Epoch: 291, training loss: 0.00131
+Epoch: 291, validation loss: 0.00170
+Epoch: 292, training loss: 0.00123
+Epoch: 292, validation loss: 0.00178
+Epoch: 293, training loss: 0.00123
+Epoch: 293, validation loss: 0.00178
+Epoch: 294, training loss: 0.00123
+Epoch: 294, validation loss: 0.00178
+Epoch: 295, training loss: 0.00123
+Epoch: 295, validation loss: 0.00178
+Epoch: 296, training loss: 0.00124
+Epoch: 296, validation loss: 0.00179
+Epoch: 297, training loss: 0.00125
+Epoch: 297, validation loss: 0.00179
+Epoch: 298, training loss: 0.00126
+Epoch: 298, validation loss: 0.00179
+Epoch: 299, training loss: 0.00124
+Epoch: 299, validation loss: 0.00176
+
+0:01:56.043180
+the relationship between loss and epochs for given hyper parameters
+test
+The test R-squared value for lstm-parflow is: 0.8025810444997503
+The test summary stats (RMSE, NSE, KGE) for lstm-parflow are: 
+ [0.65777755 0.80258106 0.50787982]
+train
+The train R-squared value for lstm-parflow is: 0.8563087237054352
+The train summary stats (RMSE, NSE, KGE) for lstm-parflow are: 
+ [0.89750064 0.85630873 0.77763352]
+val
+The val R-squared value for lstm-parflow is: 0.8524309510590385
+The val summary stats (RMSE, NSE, KGE) for lstm-parflow are: 
+ [0.34985345 0.85243097 0.7991204 ]
+warning: file exists
+saving ensemble members
+saving complete
+warning: file exists
+saving all ensemble
+saving complete

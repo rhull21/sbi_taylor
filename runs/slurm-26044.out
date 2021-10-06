@@ -1,0 +1,8 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 26, in <module>
+    from lstm_build_utils import LSTM, runLSTM
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/03_sbi_lstm/lstm_build_utils.py", line 18, in <module>
+    sys.path.append('/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/')
+NameError: name 'sys' is not defined

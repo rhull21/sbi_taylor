@@ -31,7 +31,7 @@ ensemble_name = '0819_01'
 
 
 # (where it saves and references)
-path_folder = '/home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/'
+path_folder = '/home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/' # '/scratch/taylor/ensembles_sbi/02_PARFLOW_OUT/02_PARFLOW_OUT/' # /home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/'
 supporting_folder = '/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/00_supporting/'
 
 # QH Edit to include just the years you want, note that 1983 is not a good year
@@ -64,12 +64,12 @@ for i in list(itertools.product(*AOC_vals)):
     AOC_tuples.append(i)
 
 # # temporary
-AOC_tuples = AOC_tuples[90:100]
+AOC_tuples = AOC_tuples[200:201]
 idx = 0
 for AO in AOC_tuples:
     print(idx, AO)
     idx = idx + 1
-# print(AOC_tuples))
+print(AOC_tuples)
 del idx
 
 # Run ensemble

@@ -1,0 +1,22 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+Drawing 5000 posterior samples:   0%|          | 0/5000 [00:00<?, ?it/s]Drawing 5000 posterior samples: 100%|██████████| 5000/5000 [00:00<00:00, 92629.57it/s]
+warning: file exists
+warning: file exists
+log prob true 5.044616
+torch.Size([1, 350])
+<class 'torch.Tensor'>
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 360, in <module>
+    seriesarr, fitarr = gen_Fit_Series_Wrapper(lstm_out_list, DataX_test, y_hat_full,
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/posteriorsamputils.py", line 253, in gen_Fit_Series_Wrapper
+    fitarr = gen_Fit_Wrapper(seriesarr, y_hat_full)
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/posteriorsamputils.py", line 231, in gen_Fit_Wrapper
+    fitarr[:,j,k] = compute_stats(y_o, y_hat_full)
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/assessutils.py", line 32, in compute_stats
+    return np.array([compute_RMSD(y, y_pred), compute_NSE(y, y_pred), compute_KGE(y, y_pred)])
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/assessutils.py", line 9, in compute_RMSD
+    return np.sqrt(1 / ngrid * ((np.sum(y - y_pred))**2))
+TypeError: unsupported operand type(s) for /: 'int' and 'builtin_function_or_method'

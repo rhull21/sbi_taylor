@@ -1,0 +1,18 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+warning: file exists
+0
+           DLWR
+0    258.317250
+1    222.983686
+2    239.921122
+3    263.672125
+4    262.644082
+..          ...
+360  247.314321
+361  233.053918
+362  274.248490
+363  258.059639
+364  213.814030
+
+[365 rows x 1 columns]

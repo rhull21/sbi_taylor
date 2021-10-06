@@ -1,0 +1,31 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+0 (5.0, 1e-08)
+[(5.0, 1e-08)]
+(5.0, 1e-08)
+/home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/0819_01_K-5.0-M-1e-08-_1995
+/hydrodata/PFCLM/Taylor/Simulations/1995/Taylor_1995.out.press.00000.pfb
+Solver: Field BinaryOutDir is not part of the expected schema <class 'parflow.tools.database.generated.Solver'>
+running from 0 or 0 to 8760
+K 5.0
+mannings 1e-08
+Starting Distribution Inputs/Forcing
+Done distributing forcing
+Starting run
+
+# ==============================================================================
+# ParFlow directory
+#  - /home/SHARED/software/parflow/3.9.0
+# ParFlow version
+#  - 3.7.0
+# Working directory
+#  - /home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/0819_01_K-5.0-M-1e-08-_1995
+# ParFlow database
+#  - Taylor_1995.pfidb
+# ==============================================================================
+
+
+# ==============================================================================
+# ParFlow ran successfully 💦 💦 💦 
+# ==============================================================================
+
