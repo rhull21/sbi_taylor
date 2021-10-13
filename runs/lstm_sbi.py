@@ -42,6 +42,11 @@ from sbi_build import buildPosterior, simulate
 from sbiutils import reshape_y, createYHatList
 from posteriorsamputils import statTheta, genProbThetas, gen_Fit_Series_Wrapper
 
+# LHS sampling - https://scikit-optimize.github.io/stable/auto_examples/sampler/initial-sampling-method.html
+import skopt
+from skopt.space import Space
+from skopt.sampler import Lhs
+
 '''
 Build / Load Ensemble - Globals
 '''
@@ -51,24 +56,36 @@ ensemble_path = f'/home/qh8373/SBI_TAYLOR/data/03_ensemble_out/_ensemble_{ensemb
 
 # -- LSTM Globals
 Build_LSTM = False
-lstm_name = '09_13_log_mod'
+lstm_name = '10_13_log_mod' # '09_13_log_mod'
 lstm_path = f'/home/qh8373/SBI_TAYLOR/data/04_lstm_out/{lstm_name}/'
 
+# LSTM test-train selection method
+random_flag = True
 
 # -- SBI Globals
-Build_SBI = True
-Sample_SBI = True
-sbi_name = '09_14_log_mod_2'
+Build_SBI = False
+Sample_SBI = False
+sbi_name = '1013_lstm_truth_ensemble_1'# '1007_lstm_truth_ensemble_1'
+
+# -- Truth Type  (argumens below only for using surrogate truths)
+truth_type = 'surrogate' # this is the type of truth_type = 'surrogate', 'parflow', 'observation'
+load_params = True # boolean of weather or not load params, and directory for loading (below)
+load_params_dir = '/home/qh8373/SBI_TAYLOR/data/05_sbi_out/0819_01_mod2_09_13_log_mod_1006_lstm_truth_1_full_onelstm_1/'
+set_num_unique = 30 # number of unique 'truths' to test if truth_type == surrogate ONLY
+
+# -- Ensemble
+es_ensemble = False # if you want to use the full ensemble of possibilities set to true
+idx_ensemble = 1 # some index to preferentially choose one single LSTM emulator as the 'simulator'
 
 # Statistics and stat typ
-stat_method = 'summary' #   stat_method = 'summary', 'full', 'embed'
-stat_typ = np.array([9,10]) # np.array([9,10]) #   use arrays for multiple parameters np.array([9,10])
+stat_method = 'full' #   stat_method = 'summary', 'full', 'embed'
+stat_typ = None # np.array([9,10]) # np.array([9,10]) #   use arrays for multiple parameters np.array([9,10])
 out_dim = None # 2 # number of dimensions for ML
-embed_type = None # 'MLP', 'CNN', 'RNN'
+embed_type = None # 'MLP' # 'MLP', 'CNN', 'RNN'
 stat_typ = retStatTyp(stat_method, stat_typ=stat_typ, out_dim=out_dim, embed_type=embed_type)
 
 # hyperparameters
-L_sims = 3 # for l in L (number of sbi parameter spaces to create...)
+L_sims = 10 # for l in L (number of sbi parameter spaces to create...)
 num_dim = 2 # number of dimensions of parameters *NOTE - REEVALUATE THIS
 chars = ['[', ',', ']'] # for scaling things (needs to be consistent with num_dims)
 meth, model = 'SNPE', 'maf' # method, model for sbi
@@ -79,12 +96,12 @@ n_samples = 5000 # number of samples for sbi this doesn't affect speed (more is 
 
 # prior meta variables - 'uniform' or 'lognormal'
 prior_type = 'uniform'
-prior_arg1 = 0 # this is min for uniform, loc for lognormal (LN: -3 is good for scalage between 0 and 1 over 4 orders of magnitude)
-prior_arg2 = 1 # this is max for uniform, scale for lognormal (LN: 1 is good for scalage between 0 and 1 over 4 orders of magnitude)
+prior_arg1 = 0. # this is min for uniform, loc for lognormal (LN: -3 is good for scalage between 0 and 1 over 4 orders of magnitude)
+prior_arg2 = 1. # this is max for uniform, scale for lognormal (LN: 1 is good for scalage between 0 and 1 over 4 orders of magnitude)
 
 #   brief textual description
-desc = 'Trying to test out exporting some things for further interpretation'
-sbi_full_name = f'{ensemble_name}_{lstm_name}_{sbi_name}_{stat_typ}'
+desc = 'Doing some stress testing on new method for assembling test-train data'
+sbi_full_name = f'{ensemble_name}_{lstm_name}_{sbi_name}_{stat_typ}_onelstm_{idx_ensemble}'
 sbi_dir = f'/home/qh8373/SBI_TAYLOR/data/05_sbi_out/{sbi_full_name}/'
 
 try:
@@ -113,7 +130,8 @@ if Build_LSTM:
         1. Randomly set train / validation splits
         2. Train LSTM
     '''
-    list_df_cond = buildLSTM(lstm_name, lstm_path, save, shuffle_it_in, num_members, ensemble_name, ensemble_path)
+    list_df_cond = buildLSTM(lstm_name, lstm_path, save, shuffle_it_in, 
+                            num_members, ensemble_name, ensemble_path, random_flag=random_flag)
 
 else:
     '''
@@ -137,14 +155,71 @@ if Build_SBI:
     del list_df_cond
     
     '''
+    Make decisions about how to run inference based on if it is 
+        parflow, surrogate, observation, something else
+    '''
+    # TODO move to different file for functions
+    
+    if truth_type == 'parflow':
+        None
+    elif truth_type == 'observation':
+        None
+    elif truth_type == 'surrogate':
+        
+        # handle parameters for surrogate model
+        # if load_params = False:
+            # 1. define length of truths / parameters
+            # 2. choose a random params using latin hypercube sampling
+        if load_params == False:
+            # Update number of truths
+            num_unique = set_num_unique
+            # choose random params using lhc
+            space = Space([(prior_arg1, prior_arg2), (prior_arg1, prior_arg2)])
+            lhs = Lhs(criterion="maximin", iterations=10000)
+            x = lhs.generate(space.dimensions, num_unique)
+            test_params = torch.tensor(x)
+            
+            del x, lhs, space
+        # if load_params == True
+            # 1. load in the random variables pickled earlier 
+            # 2. define length of truths / parameters
+        else:
+            with open(f"{load_params_dir}test_params.pkl", "rb") as fp:
+                test_params = pickle.load(fp)
+            print(len(test_params))
+            num_unique = len(test_params)
+        
+        # choose your lstm
+        lstm_out = lstm_out_list[idx_ensemble]
+
+        # forward simulation [days,1]
+        DataY_test = torch.empty((num_unique*series_len,1))
+        for u in range(num_unique): #num_unique
+            theta = test_params[u, :]
+            DataY_out = simulate(DataX=DataX_test, theta=theta, lstm=lstm_out)
+            DataY_test[int(u*series_len):int((u+1)*series_len),:] = DataY_out
+            # print(theta)
+            # print(DataY_test[int(u*series_len):int((u+1)*series_len),:])
+        del lstm_out, theta, u
+
+    '''
+    We have to make some decisions about inference based on if we run an ensemble
+    '''
+    if es_ensemble==False:
+        lstm_out_list = [lstm_out_list[idx_ensemble]]
+        
+        
+    '''
     create list of observations summarized by stat_typ [sbiutils]
         unique_series is used later on to test observations
     '''
+    
     unique_series = createYHatList(DataY_test, series_len, num_unique,
                     stat_method, stat_typ=stat_typ, embed_type=embed_type)
     
     unique_series_full = createYHatList(DataY_test, series_len, num_unique,
                         stat_method='full', stat_typ=None, embed_type=None)
+    
     
     '''
     create embedding net
@@ -185,6 +260,9 @@ if Build_SBI:
         
     with open(f"{sbi_dir}series_len.pkl", "wb") as handle:
         pickle.dump(series_len, handle)
+        
+    with open(f"{sbi_dir}load_params_dir.pkl", "wb") as handle:
+        pickle.dump(load_params_dir, handle)
     
     with open(f'{sbi_dir}/val.txt', 'w') as file:
         books = [f'Brief Textual Description: {desc}',
@@ -193,7 +271,7 @@ if Build_SBI:
                  f'Summary Statistic ID: {stat_typ}',
                  f'Output Dimension (embedding Net Only): {out_dim}',
                  f'Embed type: {embed_type}',
-                 f'Instantian time is: {datetime.now()}',
+                 f'Instantion time is: {datetime.now()}',
                  f'Number of SBI Runs: {L_sims}',
                  f'Number of parameter Dimensions: {num_dim}',
                  f'Inference - method:{meth} - model:{model} - hidden_features:{hidden_features} - num_transforms:{num_transforms}',
@@ -203,7 +281,12 @@ if Build_SBI:
                  f'Prior_Arg1:{prior_arg1} - Prior_Arg2:{prior_arg2}',
                  f'ParFlow Ensemble Name: {ensemble_name}',
                  f'LSTM model name: {lstm_name}',
-                 f'*Test* Parameter Values : {test_params}',
+                 f'truth type : {truth_type}',
+                 f'Is an ensemble? : {es_ensemble}',
+                 f'What index lstm (for ensemble, and for surrgoate truth)? : {idx_ensemble}',
+                 f'Load Params? : {load_params}',
+                 f'Load Param Directory : {load_params_dir}',
+                 f'*Test* Parameter Values : {test_params}'
                  ]
         file.writelines("% s\n" % data for data in books)
 
@@ -288,14 +371,17 @@ if Sample_SBI:
         unique_series
         unique_series_full
     '''
+    
     df_post_samps = pd.DataFrame(columns=['y_hat', 'y_hat_full', 'true_theta', 
                                 'posterior_samples', 'log_probability',
                                 'thetaTypeList', 'thetaStatsList', 'probStatsList',
                                 ])
+    
+
     df_post_samps['y_hat'] = unique_series
     df_post_samps['y_hat_full'] = unique_series_full
     df_post_samps['true_theta'] = test_params
-    
+
 
     for l in range(L_sims):
         '''

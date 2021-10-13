@@ -16,13 +16,16 @@ import matplotlib.pyplot as plt
 # ensemble_name (for the ensemble of outputs generated)
 ensemble_name = '0819_01'
 
+# modifications
+ensemble_name_mod = '0819_01_mod2'
+remove_list = [[100],[0.001]]
 
 # (where it saves and references)
 path_folder = '/scratch/taylor/ensembles_sbi/02_PARFLOW_OUT/02_PARFLOW_OUT/' # /home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/'
 supporting_folder = '/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/00_supporting/'
 
 #creating directory for the output
-out_dir = f'/home/qh8373/SBI_TAYLOR/data/07_metadata_out/{ensemble_name}/'
+out_dir = f'/home/qh8373/SBI_TAYLOR/data/07_metadata_out/{ensemble_name_mod}/'
 try:
   os.makedirs(out_dir)
 except:
@@ -44,12 +47,17 @@ POC = 'KM'
 # do multiple for different K / Mannings value
 AOC_vals = []
 for idx in range(len(POC)):
+    remove_list_temp = remove_list[idx]
     POC_in = POC[idx]
     AOC_vals.append([])
     with open(f'{supporting_folder}{ensemble_name}_{POC_in}_{year_run}.txt', 'r') as AOC_lines:
+        # print(AOC_lines)
         for line in AOC_lines:
-            # print(float(line))
-            AOC_vals[idx].append(float(line))
+            add_temp = float(line)
+            if (add_temp in remove_list_temp):
+                print(POC_in, add_temp, 'not included')
+            else:
+                AOC_vals[idx].append(float(line))
     AOC_lines.close()
 
 # Set up number of unique permutations of lists in tuples
@@ -69,6 +77,7 @@ for i in list(itertools.product(*AOC_vals)):
 
 # for tracking the delta storage, for later
 dS_arr = np.empty((len(AOC_tuples), 3))
+
 
 # Loop through ensemble
 for idx in range(len(AOC_tuples)):# len(AOC_tuples)
@@ -153,6 +162,7 @@ for idx in range(len(AOC_tuples)):# len(AOC_tuples)
     del out
     
 #   print(dS_arr[idx, :])
+
   
 # ------
 # compare change in storage for all models
