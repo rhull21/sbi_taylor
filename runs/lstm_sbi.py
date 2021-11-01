@@ -56,16 +56,16 @@ ensemble_path = f'/home/qh8373/SBI_TAYLOR/data/03_ensemble_out/_ensemble_{ensemb
 
 # -- LSTM Globals
 Build_LSTM = False
-lstm_name = '10_13_log_mod' # '09_13_log_mod'
+lstm_name = '09_13_log_mod' # '10_13_log_mod' (extremes reserved) # '09_13_log_mod' (totally random)
 lstm_path = f'/home/qh8373/SBI_TAYLOR/data/04_lstm_out/{lstm_name}/'
 
-# LSTM test-train selection method
-random_flag = True
+# LSTM test-train selection method (if false, will remove 0-1 from test set)
+random_flag = False
 
 # -- SBI Globals
-Build_SBI = False
-Sample_SBI = False
-sbi_name = '1013_lstm_truth_ensemble_1'# '1007_lstm_truth_ensemble_1'
+Build_SBI = True
+Sample_SBI = True
+sbi_name = '1015_stat_test' # '1013_lstm_stress_test' 
 
 # -- Truth Type  (argumens below only for using surrogate truths)
 truth_type = 'surrogate' # this is the type of truth_type = 'surrogate', 'parflow', 'observation'
@@ -78,8 +78,8 @@ es_ensemble = False # if you want to use the full ensemble of possibilities set 
 idx_ensemble = 1 # some index to preferentially choose one single LSTM emulator as the 'simulator'
 
 # Statistics and stat typ
-stat_method = 'full' #   stat_method = 'summary', 'full', 'embed'
-stat_typ = None # np.array([9,10]) # np.array([9,10]) #   use arrays for multiple parameters np.array([9,10])
+stat_method = 'summary' #   stat_method = 'summary', 'full', 'embed'
+stat_typ = np.array([5,4])  # np.array([1,3,4,5,7,9,10,11])   # np.array([9,10]) # np.array([9,10]) #   use arrays for multiple parameters np.array([9,10])
 out_dim = None # 2 # number of dimensions for ML
 embed_type = None # 'MLP' # 'MLP', 'CNN', 'RNN'
 stat_typ = retStatTyp(stat_method, stat_typ=stat_typ, out_dim=out_dim, embed_type=embed_type)
@@ -100,7 +100,7 @@ prior_arg1 = 0. # this is min for uniform, loc for lognormal (LN: -3 is good for
 prior_arg2 = 1. # this is max for uniform, scale for lognormal (LN: 1 is good for scalage between 0 and 1 over 4 orders of magnitude)
 
 #   brief textual description
-desc = 'Doing some stress testing on new method for assembling test-train data'
+desc = 'Seeing how different summary stats affect performance'
 sbi_full_name = f'{ensemble_name}_{lstm_name}_{sbi_name}_{stat_typ}_onelstm_{idx_ensemble}'
 sbi_dir = f'/home/qh8373/SBI_TAYLOR/data/05_sbi_out/{sbi_full_name}/'
 
@@ -119,7 +119,7 @@ if Build_LSTM:
     '''
     save = True
     shuffle_it_in = False
-    num_members = 10
+    num_members = 1
     
     '''
     build LSTM
@@ -505,7 +505,10 @@ if Sample_SBI:
                          f'log_prob_true_thetas_flag: {log_prob_true_thetas_flag}']
                 file.writelines("% s\n" % data for data in books)
     
+# if nothing else
+else:
+    None
 
-
+print('script complete')
 
 

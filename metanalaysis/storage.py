@@ -136,6 +136,27 @@ for idx in range(len(AOC_tuples)):# len(AOC_tuples)
   
   fig, ax = plt.subplots()
   
+  ax.plot(store_arr[:,1], label='surface', color='red')
+  ax.set_xlabel('time (days)')
+  ax.set_ylabel('total storage (units?)')
+#   ax.set_ylim(1e10, 1e11)
+  
+#   print((store_arr[:,0]/store_arr[:,2]))
+  
+#   ax2 = ax.twinx()
+#   ax2.plot((store_arr[:,0]/store_arr[:,2]), label='percent subsurface', color='red')
+#   ax2.set_ylabel('perc subsurface (decimal)')
+#   ax2.set_ylim(0, 1.1)
+
+  ax.set_title(f'{name_run} surface storage unscaled')
+  fig.legend()
+  fig.savefig(f'{out_dir}{name_run}_surface_storage_unscaled.png')
+  plt.show()
+  plt.close()
+  
+  
+  fig, ax = plt.subplots()
+  
   ax.plot(store_arr[:,2], label='total')
   ax.set_xlabel('time (days)')
   ax.set_ylabel('total storage (units?)')

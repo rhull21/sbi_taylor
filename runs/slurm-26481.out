@@ -1,0 +1,525 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/sbiutils.py:110: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(y_out)
+warning: file exists
+30
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+<class 'torch.Tensor'>
+[ 1  3  4  5  7  9 10 11]
+warning: file exists
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+[ 1  3  4  5  7  9 10 11]
+<class 'numpy.ndarray'>
+[ 1  3  4  5  7  9 10 11]
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 314, in <module>
+    posterior, end_time = buildPosterior(prior_type, prior_arg1, prior_arg2, num_dim,
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/03_sbi_lstm/sbi_build.py", line 125, in buildPosterior
+    simulator_wrapper, prior = prepare_for_sbi(simulator, prior)
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/utils/user_input_checks.py", line 501, in prepare_for_sbi
+    check_sbi_inputs(simulator, prior)
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/utils/user_input_checks.py", line 518, in check_sbi_inputs
+    simulation = simulator(theta)
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/utils/user_input_checks.py", line 434, in batch_loop_simulator
+    xs = list(map(simulator, theta))
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/utils/user_input_checks.py", line 399, in pytorch_simulator
+    return torch.as_tensor(simulator(theta), dtype=float32)
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/03_sbi_lstm/sbi_build.py", line 116, in simulator
+    stat_sim = setStatSim(y_o, stat_typ)
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/summaryutils.py", line 138, in setStatSim
+    stat_sim.append(summary(y_o, typ=stat))
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/summaryutils.py", line 126, in summary
+    stat = _operations(y,typ)
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/summaryutils.py", line 104, in _operations
+    return {
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/summaryutils.py", line 107, in <lambda>
+    3: lambda: _q_95(y),
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/summaryutils.py", line 25, in _q_95
+    out = torch.quantile(y,0.95)
+TypeError: quantile() received an invalid combination of arguments - got (numpy.ndarray, float), but expected one of:
+ * (Tensor input, Tensor q, int dim, bool keepdim, *, str interpolation, Tensor out)
+ * (Tensor input, Tensor q, int dim, bool keepdim, *, Tensor out)
+ * (Tensor input, float q, int dim, bool keepdim, *, str interpolation, Tensor out)
+ * (Tensor input, float q, int dim, bool keepdim, *, Tensor out)
+

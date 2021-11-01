@@ -19,7 +19,7 @@ from random import randint
 
 import sys
 sys.path.append('/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/')
-from lstmutils import _sliding_windows, sliding_windows, delnull, randomidx, arrangeData, selectData, data_tensor, trainloader
+from lstmutils import _sliding_windows, sliding_windows, delnull, randomidx, arrangeData, selectData, data_tensor, trainloader, findMinMaxidx
 from assessutils import compute_stats
 from genutils import seriesLength, plot_stuff
 sys.path.append('/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/03_sbi_lstm/')
@@ -32,7 +32,7 @@ This SCRIPT builds and tests an ensemble of LSTM members for use in inference
     `/home/qh8373/SBI_TAYLOR/sbi_taylor/runs/lstm_sbi.py` script
 '''
 
-def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_name, ensemble_path):
+def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_name, ensemble_path, random_flag=True):
     '''
     This function builds LSTM (note the hyper parameters are here-in contained, some things that should be broken up)
     ------
@@ -81,9 +81,17 @@ def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_n
     # fraction of data to include in train, validate, and test datasets
     train_frac, val_frac, test_frac = 0.7, 0.2, 0.1 # must sum to 1
     train_num, val_num, test_num = int(train_frac*len(name_ens_l)), int(val_frac*len(name_ens_l)), int(test_frac*len(name_ens_l))
-    test_idx = randomidx(num=test_num, num_total=np.sum([train_num, val_num, test_num]))
-    train_val_idx = randomidx(num=np.sum([train_num, val_num]), num_total=np.sum([train_num, val_num, test_num]), num_taken_in=test_idx)
     
+    # randomly | (removing 0-1 from test selection set)
+    if random_flag == False:
+        reserve_idx = findMinMaxidx(AOC_ens_scale_l)
+    else:
+        reserve_idx = []
+    
+    test_idx = randomidx(num=test_num, num_total=np.sum([train_num, val_num, test_num]), num_taken_in=reserve_idx)
+    train_val_idx = randomidx(num=np.sum([train_num, val_num]), num_total=np.sum([train_num, val_num, test_num]), num_taken_in=test_idx)
+
+
     # sample data from test and train_val periods
     data_out_test, member_name_list_test, name_ens_l_idx_test, AOC_ens_l_idx_test, AOC_ens_scale_l_idx_test = selectData(data, 
                 labelist, name_ens_l, AOC_ens_l, AOC_ens_scale_l, test_idx)
@@ -188,10 +196,24 @@ def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_n
         # '''
         # Randomly set train and validation split
         # '''
-        # set idxs (randomly) from train, validation split 
-        train_idx = randomidx(num=train_num, num_total=np.sum([train_num, val_num, test_num]), num_taken_in=test_idx)
-        val_idx = randomidx(num=val_num, num_total=np.sum([train_num, val_num, test_num]), num_taken_in=(test_idx+train_idx))
+        # set idxs from train, validation split, with or without reserve_idx (note this is a strong sort)
         
+        val_idx = randomidx(num=val_num, num_total=np.sum([train_num, val_num, test_num]), num_taken_in=(test_idx+reserve_idx))
+        train_idx = randomidx(num=train_num, num_total=np.sum([train_num, val_num, test_num]), num_taken_in=(test_idx+val_idx))
+        
+        # print(type(reserve_idx))
+        # reserve_idx.sort(reverse=True)
+        # print(reserve_idx)
+        # print('/n', len(test_idx))
+        # test_idx.sort(reverse=True)
+        # print(test_idx)
+        # print('/n', len(val_idx))
+        # val_idx.sort(reverse=True)
+        # print(val_idx)
+        # print('/n', len(train_idx))
+        # train_idx.sort(reverse=True)
+        # print(train_idx)
+                
         # sample data from train, validation periods
         data_out_train, member_name_list_train, name_ens_l_idx_train, AOC_ens_l_idx_train, AOC_ens_scale_l_idx_train = selectData(data, 
                     labelist, name_ens_l, AOC_ens_l, AOC_ens_scale_l, train_idx)

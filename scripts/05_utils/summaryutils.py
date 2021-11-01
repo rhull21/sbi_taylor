@@ -1,4 +1,5 @@
 import numpy as np
+import torch 
 
 def _q_Mean(y):
     '''
@@ -21,7 +22,8 @@ def _q_95(y):
     95 Quantile Flow
     '''
     # print('95 Quantile Flow')
-    return np.quantile(y, 0.95)
+    out = torch.quantile(y,0.95)
+    return out.item()
     
 def _q_Date_Half(y):
     '''
@@ -34,36 +36,44 @@ def _q_Date_Half(y):
     '''
     # print('Mean Half Flow Date')
     # np.where(y == _q_any(y, q=0.5))[0][0]
+    y = y.detach().numpy()
     sumy = np.sum(y)
     cumsumy = np.cumsum(y)
-    return np.where(cumsumy >= sumy/2)[0][0]
+    out_half = np.where(cumsumy >= sumy/2)[0][0]
+    return out_half
     
 def _q_05(y):
     '''
     5 Quantile Flow
     '''
     # print('5 Quantile Flow')
-    return np.quantile(y, 0.05)
+    out = torch.quantile(y,0.05)
+    return out.item()
     
 def _q_any(y, q=0.5):
     '''
     Any Quantile Flow (default = 50)
     '''
-    return np.quantile(y, q)
+    
+    out = torch.quantile(y,q)
+    return out.item()
     
 def _q_Date_Peak(y):
     '''
     Max Flow Date
     07192021 - duplicate of _q_peak_time
     '''
-    return np.where(y == y.max())[0][0]
+    y = y.detach().numpy()
+    out_date = np.where(y == y.max())[0][0]
+    return out_date
     
 def _q_99(y):
     '''
     99 Quantile Flow
     Added 07122021 to see if it makes an impact
     '''
-    return np.quantile(y, 0.99)
+    out = torch.quantile(y,0.99)
+    return out.item()    
     
 def _q_peak_flow(y):
     '''
@@ -76,7 +86,9 @@ def _q_peak_time(y):
     Hydrograph Peak Time (10 - q_peak_time)
     07192021 - duplicate of _q_Date_Peak
     '''
-    return np.where(y == y.max())[0][0]
+    y = y.detach().numpy()
+    out_time = np.where(y == y.max())[0][0]
+    return out_time
 
 def _q_flow_total(y):
     '''
@@ -121,6 +133,8 @@ def setStatSim(y_o, stat_typ):
     '''
     stat_sim = []
     for stat in stat_typ:
+        # print(type(y_o))
+        # print(stat_typ)
         stat_sim.append(summary(y_o, typ=stat))
     return stat_sim
 

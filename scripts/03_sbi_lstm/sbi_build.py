@@ -97,7 +97,6 @@ def buildPosterior(prior_type, prior_arg1, prior_arg2, num_dim,
     # - 2) a simulator that takes parameter sets and produces simulation outputs.
     #   - A simulator is a callable that takes in a parameter set and outputs data with
     #       (at least some) degree of stoachsticity
-    
     def simulator(theta):
         '''
         a simple simulator that for the sake of example adds some Gaussian noise to the parameter set
@@ -108,10 +107,14 @@ def buildPosterior(prior_type, prior_arg1, prior_arg2, num_dim,
         # simulate, using either a randomly generate ensemble member or a series with random noise
         iterator = random.randint(0,len(lstm_out_list)-1)
         lstm_out = lstm_out_list[iterator]
-        y_o = simulate(DataX=DataX, theta=theta, lstm=lstm_out).data.numpy()[:,0]
+        # y_o = simulate(DataX=DataX, theta=theta, lstm=lstm_out).data.numpy()[:,0] # previously, on 24
+        y_o = simulate(DataX=DataX, theta=theta, lstm=lstm_out)
 
+
+        
         # summary statics
         if stat_method == 'summary':
+            print(type(y_o))
             stat_sim = setStatSim(y_o, stat_typ)
             result = torch.tensor(stat_sim)
         # full time series

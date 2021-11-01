@@ -1,0 +1,25 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/3.9.0 gdal/3.2.1
+/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/sbiutils.py:110: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(y_out)
+warning: file exists
+30
+warning: file exists
+Traceback (most recent call last):
+  File "lstm_sbi.py", line 314, in <module>
+    posterior, end_time = buildPosterior(prior_type, prior_arg1, prior_arg2, num_dim,
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/03_sbi_lstm/sbi_build.py", line 127, in buildPosterior
+    simulator_wrapper, prior = prepare_for_sbi(simulator, prior)
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/utils/user_input_checks.py", line 501, in prepare_for_sbi
+    check_sbi_inputs(simulator, prior)
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/utils/user_input_checks.py", line 518, in check_sbi_inputs
+    simulation = simulator(theta)
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/utils/user_input_checks.py", line 434, in batch_loop_simulator
+    xs = list(map(simulator, theta))
+  File "/home/qh8373/.local/lib/python3.8/site-packages/sbi/utils/user_input_checks.py", line 399, in pytorch_simulator
+    return torch.as_tensor(simulator(theta), dtype=float32)
+  File "/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/03_sbi_lstm/sbi_build.py", line 115, in simulator
+    fi = fi + 1
+UnboundLocalError: local variable 'fi' referenced before assignment

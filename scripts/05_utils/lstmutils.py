@@ -147,7 +147,6 @@ def selectData(data, labelist, name_ens_l, AOC_ens_l, AOC_ens_scale_l, idx_taken
     
     return data_out, member_name_list, name_ens_l_idx, AOC_ens_l_idx, AOC_ens_scale_l_idx # , x_y_idx, x, y, t_bool, 
 
-
 def arrangeData(data, name_ens_l, AOC_ens_l, AOC_ens_scale_l, labelist, seq_length, fut_length, shuffle_it=False):
     '''
     Function for assmebling dataset for PyTorch
@@ -287,3 +286,14 @@ def _moduleLoad(load_PATH, ret_seq_info=False):
         return seq_length, fut_length
     else:
         return lstm
+        
+def findMinMaxidx(AOC_ens_scale_l):
+    '''
+    Finds Min and Max of idx for exclusion (if desired)
+    '''
+    # find indices of idx
+    idx_find = np.where((AOC_ens_scale_l == 0.) | (AOC_ens_scale_l == 1.))[0].tolist()
+    
+    # remove replicates
+    idx_find = list(set(idx_find))
+    return idx_find
