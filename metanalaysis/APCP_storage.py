@@ -78,13 +78,13 @@ for i in list(itertools.product(*AOC_vals)):
 # for tracking the delta storage, for later
 dS_arr = np.empty((len(AOC_tuples), 3))
 
-# add total storage from precip (check this)
-read_dir = '/home/qh8373/SBI_TAYLOR/data/03_ensemble_out/_ensemble_0819_01_mod2/'
-df_l = pd.read_csv(read_dir+'df_l.csv')
+# # add total storage from precip (check this)
+# read_dir = '/home/qh8373/SBI_TAYLOR/data/03_ensemble_out/_ensemble_0819_01_mod2/'
+# df_l = pd.read_csv(read_dir+'df_l.csv')
 
-APCP_storage = df_l['APCP'].sum()
+# APCP_storage = df_l['APCP'].sum()
 
-
+APCP_storage = 0
 # Loop through ensemble
 for idx in range(len(AOC_tuples)):# len(AOC_tuples)
   # make this as the AOC value
@@ -122,12 +122,23 @@ for idx in range(len(AOC_tuples)):# len(AOC_tuples)
   # ---------
   for i in range(no_day+1):
       data.time = i # time step for all Pf-cLM outputs
-    #   data.forcing_time = 0 # time step for all forcings
+
+    #   help(run)      
+      if idx == 0:
+        # data.forcing_time = i # time step for all forcings
+        # print(help(data))
+        
+        # Frocings varaibles
+        APCP_array = data.clm_forcing_apcp
+        print(APCP_array)
+        sys.exit()
       
       # storages
       w = 'subsurface_storage'
       sub_array = getattr(data,w)
       sub_sum = np.round(sub_array.sum(), 0)
+      
+      sys.exit()
       
       w = 'surface_storage'
       surf_array = getattr(data,w)

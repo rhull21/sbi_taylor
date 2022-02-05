@@ -95,6 +95,22 @@ def _q_flow_total(y):
     Hydrograph Total Outflow (11 - q_flow_total)  
     '''
     return y.sum()
+    
+def _q_90(y):
+    '''
+    90 Quantile Flow
+    '''
+    # print('95 Quantile Flow')
+    out = torch.quantile(y,0.90)
+    return out.item()
+    
+def _q_10(y):
+    '''
+    90 Quantile Flow
+    '''
+    # print('95 Quantile Flow')
+    out = torch.quantile(y,0.10)
+    return out.item()
  
     
 def _operations(y,typ, q=0.5):
@@ -112,7 +128,9 @@ def _operations(y,typ, q=0.5):
         8: lambda: _q_99(y),
         9: lambda: _q_peak_flow(y),
         10: lambda: _q_peak_time(y),
-        11: lambda: _q_flow_total(y)
+        11: lambda: _q_flow_total(y),
+        12: lambda: _q_90(y),
+        13: lambda: _q_10(y)
     }.get(typ, lambda: 'Not a valid operation')()
 
 

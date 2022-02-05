@@ -32,7 +32,7 @@ This SCRIPT builds and tests an ensemble of LSTM members for use in inference
     `/home/qh8373/SBI_TAYLOR/sbi_taylor/runs/lstm_sbi.py` script
 '''
 
-def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_name, ensemble_path, random_flag=True):
+def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_name, ensemble_path, random_flag=True, load_test_idx=False, lstm_load_path=None):
     '''
     This function builds LSTM (note the hyper parameters are here-in contained, some things that should be broken up)
     ------
@@ -88,7 +88,13 @@ def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_n
     else:
         reserve_idx = []
     
-    test_idx = randomidx(num=test_num, num_total=np.sum([train_num, val_num, test_num]), num_taken_in=reserve_idx)
+    
+    # set up the idxs 
+    if load_test_idx:
+        test_idx = pickle.load(open(f'{lstm_load_path}test_idx.pkl', 'rb')) # list
+    else:
+        test_idx = randomidx(num=test_num, num_total=np.sum([train_num, val_num, test_num]), num_taken_in=reserve_idx)
+    
     train_val_idx = randomidx(num=np.sum([train_num, val_num]), num_total=np.sum([train_num, val_num, test_num]), num_taken_in=test_idx)
 
 
@@ -142,6 +148,8 @@ def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_n
         file.write(f'train number {train_num}\n')
         file.write(f'validate number {val_num}\n')
         file.write(f'test number {test_num}\n')
+        file.write(f'load test idx? {load_test_idx}\n')
+        file.write(f'idx from where? {lstm_load_path}\n')
         file.close()
     
         file = open(save_path+"series_len.txt", "w")
@@ -268,13 +276,15 @@ def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_n
             # set up temporary dataframe
             temp_df = cond_df.loc[idx]
             # read out stats
-            r2_out, stats_out = evallstm(lstm_out, dataY=temp_df['DataY'], dataX=temp_df['DataX'],
-                                    cond=idx, save_path_out=temp_df['save_path_out'],
-                                    member_name_l=temp_df['member_name'], series_len=temp_df['series_len'],
-                                    shuffle_it_in=temp_df['shuffle_it_in'], save=True)
+            r2_out, stats_out = evallstm(lstm=lstm_out, dataY=temp_df['DataY'], dataX=temp_df['DataX'],
+                                cond=idx, save_path_out=temp_df['save_path_out'],
+                                member_name_l=temp_df['member_name'], series_len=temp_df['series_len'],
+                                shuffle_it_in=temp_df['shuffle_it_in'], save=True)
+        
+                    
             # add to a dataframe
-            cond_df.loc[idx]['r2'] = r2_out
-            cond_df.loc[idx]['rmse-nse-kge'] = stats_out
+            cond_df['r2'].loc[idx] = r2_out
+            cond_df['rmse-kge-nse'].loc[idx] = stats_out
             del temp_df
             
         list_df_cond.append(cond_df)
@@ -328,6 +338,13 @@ def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_n
             file.write(f'{datetime.now() - start_new}\n')
             file.close()
             
+ 
+            with open(save_path_out+"metrics_1.pkl", "wb") as fp:   
+                pickle.dump(cond_df['rmse-kge-nse'], fp)
+                
+            with open(save_path_out+"metrics_2.pkl", "wb") as fp:   
+                pickle.dump(cond_df['r2'], fp)
+            
             
             print('saving complete')
             
@@ -346,6 +363,7 @@ def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_n
             del cond_df
             del lstm_out
             del file
+        
         
     # '''
     # Save data relevant to sbi for all lstm ensemble members

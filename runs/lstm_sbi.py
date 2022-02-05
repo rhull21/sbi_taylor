@@ -55,37 +55,57 @@ ensemble_name = '0819_01_mod2'
 ensemble_path = f'/home/qh8373/SBI_TAYLOR/data/03_ensemble_out/_ensemble_{ensemble_name}/'
 
 # -- LSTM Globals
-Build_LSTM = False
-lstm_name = '09_13_log_mod' # '10_13_log_mod' (extremes reserved) # '09_13_log_mod' (totally random)
+Build_LSTM = True 
+lstm_name = '02_05_lstm_A' # '11_09_log_mod' # 10_13_log_mod' (extremes reserved) # '09_13_log_mod' (totally random) # '10_13_log_mod_b' (from 10_13)
 lstm_path = f'/home/qh8373/SBI_TAYLOR/data/04_lstm_out/{lstm_name}/'
-
-# LSTM test-train selection method (if false, will remove 0-1 from test set)
-random_flag = False
+if Build_LSTM:
+    random_flag = False # LSTM test-train selection method (if false, will remove 0-1 from test set)
+    save_lstm = True
+    shuffle_it_in = False
+    num_members = 10
+load_test_idx = True # if True, will load lstm
+if load_test_idx:
+    lstm_load = '10_13_log_mod'
+    lstm_load_path = f'/home/qh8373/SBI_TAYLOR/data/04_lstm_out/{lstm_load}/'
+else:
+    lstm_load = False
+    lstm_load_path = None
 
 # -- SBI Globals
 Build_SBI = True
 Sample_SBI = True
-sbi_name = '1015_stat_test' # '1013_lstm_stress_test' 
+sbi_name = '1127_01' # '1013_lstm_stress_test' 
 
 # -- Truth Type  (argumens below only for using surrogate truths)
-truth_type = 'surrogate' # this is the type of truth_type = 'surrogate', 'parflow', 'observation'
-load_params = True # boolean of weather or not load params, and directory for loading (below)
-load_params_dir = '/home/qh8373/SBI_TAYLOR/data/05_sbi_out/0819_01_mod2_09_13_log_mod_1006_lstm_truth_1_full_onelstm_1/'
-set_num_unique = 30 # number of unique 'truths' to test if truth_type == surrogate ONLY
+truth_type = 'parflow' # this is the type of truth_type = 'surrogate', 'parflow', 'observation'
+if truth_type == 'surrogate':
+    load_params = True # boolean of weather or not load params, and directory for loading (below)
+    mix_load = True # if mix load, then loads params from lstm test data, too
+    load_params_dir = '/home/qh8373/SBI_TAYLOR/data/05_sbi_out/0819_01_mod2_10_13_log_mod_1107_01_full_onelstm_0_raw/' # '/home/qh8373/SBI_TAYLOR/data/05_sbi_out/0819_01_mod2_10_13_log_mod_1107_01_full_onelstm_0_raw/' # '/home/qh8373/SBI_TAYLOR/data/05_sbi_out/0819_01_mod2_09_13_log_mod_1107_01_full_onelstm_1/'
+    set_num_unique = 82 # number of unique 'truths' to test if truth_type == surrogate ONLY
+else:
+    load_params = None
+    mix_load = None
+    load_params_dir = None
+    set_num_unique = None
 
 # -- Ensemble
-es_ensemble = False # if you want to use the full ensemble of possibilities set to true
-idx_ensemble = 1 # some index to preferentially choose one single LSTM emulator as the 'simulator'
+es_ensemble = True # if you want to use the full ensemble of possibilities set to true
+idx_ensemble = 0 # some index to preferentially choose one single LSTM emulator as the 'simulator'
+
+# -- Noise
+add_noise = False # set to true to add some gaussian randomness, scaled by the factor f_noise below
+f_noise = 1e-02 # scaling factor (multiplied times every point in the time series). Anything bigger than 1e-02 could overwhelm natural signal
 
 # Statistics and stat typ
-stat_method = 'summary' #   stat_method = 'summary', 'full', 'embed'
-stat_typ = np.array([5,4])  # np.array([1,3,4,5,7,9,10,11])   # np.array([9,10]) # np.array([9,10]) #   use arrays for multiple parameters np.array([9,10])
+stat_method = 'full' #   stat_method = 'summary', 'full', 'embed'
+stat_typ = None # np.array([1,12,13]) # np.array([9,10])  # np.array([1,3,4,5,7,9,10,11])   # np.array([9,10]) # np.array([9,10]) #   use arrays for multiple parameters np.array([9,10])
 out_dim = None # 2 # number of dimensions for ML
 embed_type = None # 'MLP' # 'MLP', 'CNN', 'RNN'
 stat_typ = retStatTyp(stat_method, stat_typ=stat_typ, out_dim=out_dim, embed_type=embed_type)
 
 # hyperparameters
-L_sims = 10 # for l in L (number of sbi parameter spaces to create...)
+L_sims = 5 # for l in L (number of sbi parameter spaces to create...)
 num_dim = 2 # number of dimensions of parameters *NOTE - REEVALUATE THIS
 chars = ['[', ',', ']'] # for scaling things (needs to be consistent with num_dims)
 meth, model = 'SNPE', 'maf' # method, model for sbi
@@ -100,8 +120,8 @@ prior_arg1 = 0. # this is min for uniform, loc for lognormal (LN: -3 is good for
 prior_arg2 = 1. # this is max for uniform, scale for lognormal (LN: 1 is good for scalage between 0 and 1 over 4 orders of magnitude)
 
 #   brief textual description
-desc = 'Seeing how different summary stats affect performance'
-sbi_full_name = f'{ensemble_name}_{lstm_name}_{sbi_name}_{stat_typ}_onelstm_{idx_ensemble}'
+desc = 'running with modifying 0819_01_mod2_10_13_log_mod to create ensemblen ensemble with parflow truths'
+sbi_full_name = f'{ensemble_name}_{lstm_name}_{sbi_name}_{stat_typ}_{truth_type}'
 sbi_dir = f'/home/qh8373/SBI_TAYLOR/data/05_sbi_out/{sbi_full_name}/'
 
 try:
@@ -117,9 +137,6 @@ if Build_LSTM:
     '''
     Set LSTM Build Variables
     '''
-    save = True
-    shuffle_it_in = False
-    num_members = 1
     
     '''
     build LSTM
@@ -130,8 +147,10 @@ if Build_LSTM:
         1. Randomly set train / validation splits
         2. Train LSTM
     '''
-    list_df_cond = buildLSTM(lstm_name, lstm_path, save, shuffle_it_in, 
-                            num_members, ensemble_name, ensemble_path, random_flag=random_flag)
+    list_df_cond = buildLSTM(lstm_name, lstm_path, save_lstm, shuffle_it_in, 
+                            num_members, ensemble_name, ensemble_path, 
+                            random_flag=random_flag, load_test_idx=load_test_idx,
+                            lstm_load_path=lstm_load_path)
 
 else:
     '''
@@ -154,6 +173,9 @@ if Build_SBI:
     test_params, num_params, num_unique, DataX_test = parseUniqueParams(DataX_test, series_len)
     del list_df_cond
     
+    # print(test_params)
+    # print(test_params.shape)
+    
     '''
     Make decisions about how to run inference based on if it is 
         parflow, surrogate, observation, something else
@@ -161,23 +183,34 @@ if Build_SBI:
     # TODO move to different file for functions
     
     if truth_type == 'parflow':
-        None
+        test_params = test_params
     elif truth_type == 'observation':
         None
     elif truth_type == 'surrogate':
-        
+    
         # handle parameters for surrogate model
         # if load_params = False:
             # 1. define length of truths / parameters
             # 2. choose a random params using latin hypercube sampling
         if load_params == False:
-            # Update number of truths
-            num_unique = set_num_unique
             # choose random params using lhc
             space = Space([(prior_arg1, prior_arg2), (prior_arg1, prior_arg2)])
             lhs = Lhs(criterion="maximin", iterations=10000)
-            x = lhs.generate(space.dimensions, num_unique)
-            test_params = torch.tensor(x)
+            x = lhs.generate(space.dimensions, set_num_unique)
+            x = torch.tensor(x)
+        
+            # reload the lstm truths
+            if mix_load == True:
+                test_params = torch.cat((x,test_params))
+            else:
+                # 
+                test_params = x
+                
+            num_unique = len(test_params)
+            
+            # print(test_params)
+            # print(test_params.shape)
+            # print(num_unique)
             
             del x, lhs, space
         # if load_params == True
@@ -201,6 +234,7 @@ if Build_SBI:
             # print(theta)
             # print(DataY_test[int(u*series_len):int((u+1)*series_len),:])
         del lstm_out, theta, u
+
 
     '''
     We have to make some decisions about inference based on if we run an ensemble
@@ -282,7 +316,9 @@ if Build_SBI:
                  f'ParFlow Ensemble Name: {ensemble_name}',
                  f'LSTM model name: {lstm_name}',
                  f'truth type : {truth_type}',
+                 f'mix load params : {mix_load}',
                  f'Is an ensemble? : {es_ensemble}',
+                 f'Add Noise? What Noise Factor? : {add_noise}, {f_noise}',
                  f'What index lstm (for ensemble, and for surrgoate truth)? : {idx_ensemble}',
                  f'Load Params? : {load_params}',
                  f'Load Param Directory : {load_params_dir}',
@@ -317,7 +353,7 @@ if Build_SBI:
                             stat_method=stat_method, stat_typ=stat_typ,
                             meth=meth, model=model, hidden_features=hidden_features,
                             num_transforms=num_transforms, n_sims=n_sims, n_samples=n_samples,
-                            embedding_net=embedding_net)
+                            embedding_net=embedding_net, add_noise=add_noise, f_noise=f_noise)
         '''
         save at child level 1
         '''
@@ -358,7 +394,20 @@ else:
     with open(f"{sbi_dir}series_len.pkl", "rb") as fp:
         series_len = pickle.load(fp)
         
-
+    # '''
+    # ParFlow truth loads
+    # lstm_df_cond should be loaded
+    # to test ParFlow truths on models trained with LSTMs and previous tested with LSTM synthetic truths
+    # '''
+    
+    # DataX_test, DataY_test, series_len, lstm_out_list = parseListDf(list_df_cond)
+    # test_params, num_params, num_unique, DataX_test = parseUniqueParams(DataX_test, series_len)
+    # unique_series_PF = createYHatList(DataY_test, series_len, num_unique,
+    #                 stat_method, stat_typ=stat_typ, embed_type=embed_type)
+    # unique_series_full_PF = createYHatList(DataY_test, series_len, num_unique,
+    #                     stat_method='full', stat_typ=None, embed_type=None)
+    
+ 
 if Sample_SBI:
     '''
     Sample SBI at all observations

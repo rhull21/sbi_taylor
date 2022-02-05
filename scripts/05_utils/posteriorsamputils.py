@@ -69,7 +69,8 @@ def genProbThetas(params_true_scaled, posterior_samples, log_probability, theta_
     ## NOTE need to figure out how to do log_prob_true_thetas_all for more than two (i.e. dynamic number) of thetas
 
     # don't run this routine if working with unknown parameter values
-    if params_true_scaled == None:
+    if params_true_scaled.all() is None:
+        # print(params_true_scaled)
         return None, None, None
     else:
         # convert
@@ -97,10 +98,10 @@ def genProbThetas(params_true_scaled, posterior_samples, log_probability, theta_
             
             # # find acceptable thetas
             # theta_acc = np.take(theta_i, theta_idx)
-
+    
         # generate log_prob_true_thetas_all
         log_prob_true_thetas_all = np.intersect1d(idx_list[0],idx_list[1])
-
+    
         # flag log_prob_true_thetas_flag, and if True set to lowest probability in dataset
         if len(log_prob_true_thetas_all) == 0:
             log_prob_true_thetas_all = log_probability.min()
@@ -115,7 +116,7 @@ def genProbThetas(params_true_scaled, posterior_samples, log_probability, theta_
         # log_prob_true_thetas_all = convertNumpy(log_prob_true_thetas_all, toTorch=True)
          
         return log_prob_true_thetas_ind, log_prob_true_thetas_all, log_prob_true_thetas_flag
-        
+    
 # max prob theta, 
 def maxProbTheta(posterior_samples, log_probability):
     '''

@@ -20,6 +20,8 @@ import pickle
 import torch
 from datetime import datetime
 
+import torch
+
 def createPrior(prior_type, prior_arg1, prior_arg2, num_dim):
     '''
     Create the prior for SBI
@@ -63,7 +65,7 @@ def buildPosterior(prior_type, prior_arg1, prior_arg2, num_dim,
                     stat_method, stat_typ,
                     meth, model, hidden_features,
                     num_transforms, n_sims, n_samples,
-                    embedding_net):
+                    embedding_net, add_noise=False, f_noise=1e-02):
     '''
        build sbi
             create prior [sbi_build, helper]
@@ -86,6 +88,8 @@ def buildPosterior(prior_type, prior_arg1, prior_arg2, num_dim,
         num_transforms : 
         n_sims : 
         n_samples :
+        
+        add_noise : if True, then will add a degree of noise = f_noise to outputs
     '''
     start_time = datetime.now()
     
@@ -100,6 +104,7 @@ def buildPosterior(prior_type, prior_arg1, prior_arg2, num_dim,
     def simulator(theta):
         '''
         a simple simulator that for the sake of example adds some Gaussian noise to the parameter set
+        
         '''
         # # add 'stochasticity' (ca) (w/o ensembles..)
         # y_o = y_o + y_o * np.random.randn(y_o.shape[0]) * 0.05 
@@ -109,7 +114,19 @@ def buildPosterior(prior_type, prior_arg1, prior_arg2, num_dim,
         lstm_out = lstm_out_list[iterator]
         # y_o = simulate(DataX=DataX, theta=theta, lstm=lstm_out).data.numpy()[:,0] # previously, on 24
         y_o = simulate(DataX=DataX, theta=theta, lstm=lstm_out)
-
+        
+        # print(y_o)
+        # print(y_o.shape)
+        # print('')
+        
+        if add_noise:
+            y_o = y_o + y_o * torch.randn(y_o.shape) * f_noise
+            # print(torch.randn(y_o.shape).shape)
+            # print('noise_added')
+            # print('')
+        # print(y_o)
+        # print(y_o.shape)
+        # sys.exit()
 
         
         # summary statics
