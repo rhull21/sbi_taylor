@@ -111,7 +111,7 @@ from scalerutils import scaled_ens_Values, scaledForcingData, scaledAOCData
 from posteriorsamputils import statTheta, genProbThetas, gen_Fit_Series_Wrapper
 from summaryutils import summary, setStatSim
 from sbiutils import retStatTyp, parseListDf, parseUniqueParams
-from sbiutils import reshape_y, createYHatList
+from sbiutils import reshape_y, createYHatList, setTheta, setNoise
 
 
 '''
@@ -202,7 +202,7 @@ def grabDataarrays(sbi_dir, sub, sub_sub_int):
     return DataX_test, test_params, lstm_out_list, y_hat, seriesarr, log_probability, posterior_samples
 
 
-def genSimulation(DataX_test,boots_params,lstm_out_list,rand_lstm=False,lstm_idx=0,y_len=350):
+def genSimulation(DataX_test,boots_params,lstm_out_list,add_noise=False,f_noise=1e-02,rand_lstm=False,lstm_idx=0,y_len=350):
     '''
     simulates for all instantiations of boots_params
     '''
@@ -212,13 +212,20 @@ def genSimulation(DataX_test,boots_params,lstm_out_list,rand_lstm=False,lstm_idx
     for i in range(n):
         if (len(lstm_out_list) > 1) and rand_lstm:
             idx_slct = randint(0, len(lstm_out_list)-1)
-            # print(idx_slct) 
             lstm_out = lstm_out_list[idx_slct]
         else:
             lstm_out = lstm_out_list[lstm_idx]
         theta = boots_params[i,:]
-        y_sim = simulate(DataX_test,theta,lstm_out).detach().numpy()[:,0]
-#         print(y_sim.shape)
+        
+        y_sim = simulate(DataX_test,theta,lstm_out)
+        
+        # decides whether or not to add noise
+        if add_noise:
+            # print('make some noise')
+            y_sim = setNoise(y_sim, f_noise)
+        
+        y_sim = y_sim.detach().numpy()[:,0]
+        
         y_sims[i,:] = y_sim
     
 #     print(y_sims.shape)
@@ -245,7 +252,7 @@ def randBootstrap(posterior_samples, log_probability, n=50):
         
     return boots_params, boots_logprob, idxs
 
-def getData(sub, sub_sub_int, sbi_dir, ret_arrays=False):
+def getData(sub, sub_sub_int, sbi_dir, ret_arrays=False, add_noise=False, f_noise=1e-02):
     '''
     function for retrieving data, and data to plot in time series
     
@@ -276,7 +283,7 @@ def getData(sub, sub_sub_int, sbi_dir, ret_arrays=False):
     # generate forward simulations
     if len(lstm_out_list) > 1:
         print('Caution, multiple emulators available')    
-    y_sims = genSimulation(DataX_test,boots_params,lstm_out_list,lstm_idx=0,y_len=y_len)
+    y_sims = genSimulation(DataX_test,boots_params,lstm_out_list,add_noise=add_noise,f_noise=f_noise,lstm_idx=0,y_len=y_len)
     
     if ret_arrays==False:
         return y_sims, y_hat_plot
@@ -384,7 +391,7 @@ def getStatTypArray(stat_typ, y_hat_plot):
     return stat_sim
     
     
-def getData_Surface(save_dir, sub, sub_sub_num, stats_bool=False, stat_typ=None, scaled_bool=True, save_bool=True):
+def getData_Surface(save_dir, sbi_dir, sub, sub_sub_num, stats_bool=False, stat_typ=None, scaled_bool=True, save_bool=True):
     '''
     For getting data out to plot as a 2D surface
     '''
@@ -477,7 +484,9 @@ def getData_Surface(save_dir, sub, sub_sub_num, stats_bool=False, stat_typ=None,
 Single SBI Visualization
 '''
 
-def plot_hydrograph(save_dir, sub, sub_sub_num, dim1, dim2, trueflow=False, true_flow_idx=None, scaled_bool=True, save_bool=True):
+def plot_hydrograph(save_dir, sbi_dir, sub, sub_sub_num, dim1, dim2, 
+                    trueflow=False, true_flow_idx=None, scaled_bool=True, save_bool=True, 
+                    add_noise=False, f_noise=1e-02):
     '''
     Plots hydrograph for an entire SBI run with all observations
     But only one SBI run
@@ -519,7 +528,7 @@ def plot_hydrograph(save_dir, sub, sub_sub_num, dim1, dim2, trueflow=False, true
             i = 0
             j = j + 1
 
-        y_sims, y_hat_plot = getData(sub, k, sbi_dir)
+        y_sims, y_hat_plot = getData(sub, k, sbi_dir, add_noise=add_noise, f_noise=f_noise)
 
         axs[i,j].plot(y_sims.T, color='blue', alpha=0.25) #, label='y_sims')
         axs[i,j].plot(np.mean(y_sims.T,axis=1), color='red', linewidth=1, label='mean')

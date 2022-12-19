@@ -3,13 +3,17 @@ Updated 02052022
 PseudoCode:
 
 Questions:
-    * Build in Notebook?
-    * Maybe train an ensemble of 5 surrogates, just in case you can't find a biased one...
+    * ~~Build in Notebook?~~
+    * ~~Maybe train an ensemble of 5 surrogates, just in case you can't find a biased one...~~
     * L.H.C. for Experiment 1 training fraction
-    * Noise for simulator, positive AND negative?
+    * ~~Noise for simulator, positive AND negative?~~ (it is...)
     * MAF, how does it work?
     * 'merged' posterior = desirable, or mixing information....
     * Set up MC
+    
+References:
+    * `02_05_lstm_A` = LSTM for Experiments 1, and `2_1, 2_2a, 2_2b`
+    
 
 
 0. Shared Qualities of Experiments and Abstracted From Psuedocode:
@@ -86,6 +90,14 @@ Questions:
                 * Show each P(`theta | q_surr_all` = `q_surr_obs`) as pairplot
             * Bulk performance across parameter space for all `n_obs=100` synthetic observations
                 * colorflod showing `1. Euclidean Distance`, `2. Determinant` and, `3. theta_true_log_prob`
+                    1. `Euclidean Distance`
+                        * the `mean` and `std` of (the distance between the true parameter and the mean of the array representing a sample) 
+                            * over `L_samples = 10` posterior samples each of `L_sims = 10` P(`theta | q_surr_all`)  
+                    2. `Determinant`
+                        * the `mean` and `std` of (the determinant of the array representing a sample) 
+                            * over `L_samples = 10` posterior samples each of `L_sims = 10` P(`theta | q_surr_all`) 
+                    3. `theta_true_log_prob`
+                        * based on some tolerance (see `genProbThetas`)
         * Performance in Streamflow Space:
             * Principle: 
                 * Bootstrap n=50 parameters pairs `{theta1, theta2}` from P(`theta | q_surr_all` = `q_surr_obs`)
@@ -142,7 +154,7 @@ Questions:
                 - **Same as Experiment 2, Dimension 1**
             2. **Construct** amortized (full) P(`theta | q_surr_all`) via a Neural Density Estimator, or `NDE`
                 - **Similar to Experiment 2, Dimension 1, except**
-                    - set stat_typ = `np.array([1,12,13])` (these are the summary stats)
+                    - set stat_typ = `np.array([4,12,13])` (these are the summary stats)
                     - **this will implicitly ensure that all modeled quantities, `q_PF_obs` and `q_surr_all`, are expressed in terms of those three statistics**
             3. Sample posterior, P(`theta | q_surr_all = q_PF_obs`)
                 - **Same as Experiment 2, Dimension 1**
@@ -186,7 +198,7 @@ Questions:
                     * Structure: 
                         * `q_{t+1} = lstm_exp1(forcings_{t->t-14}, theta1, theta2)`
                     * Hyperparameters:
-                        - **num_epochs = 150** # number of times iterating through the model
+                        - **num_epochs = 100** # number of times iterating through the model
                             - trained for lower number of iterations
                     * Number of Surrogates Trained:
                         - **`num_members` = 10**

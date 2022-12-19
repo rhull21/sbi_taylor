@@ -2,7 +2,7 @@
 #SBATCH --job-name=ParFlow_Run
 #SBATCH --nodes=1
 #SBATCH --ntasks=9
-#SBATCH --time=8:00:00
+#SBATCH --time=12:00:00
 
 
 module purge

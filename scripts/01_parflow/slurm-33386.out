@@ -1,0 +1,13 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/bfe6b5d gdal/3.2.1
+(0.17636001, 3.30217451e-05)
+/home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/0418_02_K-0.17636001-M-3.30217451e-05-_1995
+/hydrodata/PFCLM/Taylor/simulations/1995/Taylor_1995.out.press.00000.pfb
+Traceback (most recent call last):
+  File "PARFLOW_Taylor_run.py", line 173, in <module>
+    shutil.copy(f'{reference_run_path}{reference_run_name}', run_dir)
+  File "/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/shutil.py", line 415, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/shutil.py", line 261, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/qh8373/UCRB/00_Principle_UCRB_Scripts/ParFlow/Reference.yaml'

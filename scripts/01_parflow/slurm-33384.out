@@ -1,0 +1,12 @@
+Loading parflow-ml/latest
+  Loading requirement: openmpi/gcc/4.1.0 parflow/bfe6b5d gdal/3.2.1
+(0.10774569, 1.8741311e-05)
+/home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/0418_01_K-0.10774569-M-1.8741311e-05-_1995
+Traceback (most recent call last):
+  File "PARFLOW_Taylor_run.py", line 116, in <module>
+    shutil.copy(f'{path_slope_x}', run_dir)
+  File "/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/shutil.py", line 415, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/SHARED/software/anaconda3/2020.07e/lib/python3.8/shutil.py", line 261, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: '/hydrodata/PFCLM/Taylor/Simulations/inputs/slope_x.pfb'

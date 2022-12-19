@@ -64,7 +64,7 @@ def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_n
     bs = 50
     
     # For LSTM
-    num_epochs = 300 # number of times iterating through the model
+    num_epochs = 100 # 10 #300 # number of times iterating through the model
     learning_rate = 0.001 # rate of learning
     input_size = 10 # nodes on the input (should be number of features)
     hidden_size = 10 # number of nodes in hidden layer 
@@ -79,7 +79,7 @@ def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_n
     # -- (add functions?)
     # '''
     # fraction of data to include in train, validate, and test datasets
-    train_frac, val_frac, test_frac = 0.7, 0.2, 0.1 # must sum to 1
+    train_frac, val_frac, test_frac = 0.6, 0.3, 0.1 # 0.7, 0.2, 0.1 # must sum to 1 
     train_num, val_num, test_num = int(train_frac*len(name_ens_l)), int(val_frac*len(name_ens_l)), int(test_frac*len(name_ens_l))
     
     # randomly | (removing 0-1 from test selection set)
@@ -262,7 +262,7 @@ def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_n
         cond_df['member_name']= [name_ens_l_idx_test, 
                                 name_ens_l_idx_train, 
                                 name_ens_l_idx_val]
-        cond_df['lstm_out'] = lstm_out
+        cond_df['lstm_out'] = lstm_out.train()
         cond_df['series_len'] = series_len
         cond_df['save_path_out'] = save_path_out
         cond_df['shuffle_it_in'] = shuffle_it_in
@@ -374,6 +374,15 @@ def buildLSTM(lstm_name, save_path, save, shuffle_it_in, num_members, ensemble_n
         except:
             print('warning: file exists')
             pass
+        
+        # 02092022 We had some issue with memory management in list_df_cond, so we will try to work around that issue
+        for df in list_df_cond:
+            # read in 
+            save_path_temp = df['save_path_out']['test']
+            with open(save_path_temp+"lstm_trained.pkl", 'rb') as fp:
+                lstm_temp = pickle.load(fp)
+            df['lstm_out'] = lstm_temp
+            del save_path_temp, lstm_temp
         
         print('saving all ensemble')
         with open(save_path+"list_df_cond.pkl", "wb") as fp:   

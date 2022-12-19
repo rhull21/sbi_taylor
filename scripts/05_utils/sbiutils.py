@@ -148,4 +148,12 @@ def setTheta(DataX, theta):
     num_theta = len(theta)
     DataX[:,:,-num_theta:] = theta
     return DataX
+    
+    
+def setNoise(y_o, f_noise):
+    '''
+    Used to generate noise for simulations to create posterior and take out posterior
+    '''
+    y_o = y_o + y_o * torch.randn(y_o.shape) * f_noise
+    return y_o
 

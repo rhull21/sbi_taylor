@@ -55,15 +55,17 @@ ensemble_name = '0819_01_mod2'
 ensemble_path = f'/home/qh8373/SBI_TAYLOR/data/03_ensemble_out/_ensemble_{ensemble_name}/'
 
 # -- LSTM Globals
-Build_LSTM = True 
-lstm_name = '02_05_lstm_A' # '11_09_log_mod' # 10_13_log_mod' (extremes reserved) # '09_13_log_mod' (totally random) # '10_13_log_mod_b' (from 10_13)
+Build_LSTM = False 
+lstm_name = '02_09_lstm_C' # '02_06_lstm_C' # '02_05_lstm_A' # '11_09_log_mod' # 10_13_log_mod' (extremes reserved) # '09_13_log_mod' (totally random) # '10_13_log_mod_b' (from 10_13)
 lstm_path = f'/home/qh8373/SBI_TAYLOR/data/04_lstm_out/{lstm_name}/'
+
 if Build_LSTM:
     random_flag = False # LSTM test-train selection method (if false, will remove 0-1 from test set)
     save_lstm = True
     shuffle_it_in = False
     num_members = 10
-load_test_idx = True # if True, will load lstm
+    
+load_test_idx = True # if True, will load reserved test set from previous lstm, to be used to build LSTM
 if load_test_idx:
     lstm_load = '10_13_log_mod'
     lstm_load_path = f'/home/qh8373/SBI_TAYLOR/data/04_lstm_out/{lstm_load}/'
@@ -74,10 +76,10 @@ else:
 # -- SBI Globals
 Build_SBI = True
 Sample_SBI = True
-sbi_name = '1127_01' # '1013_lstm_stress_test' 
+sbi_name = '0210_01' # '1013_lstm_stress_test' 
 
 # -- Truth Type  (argumens below only for using surrogate truths)
-truth_type = 'parflow' # this is the type of truth_type = 'surrogate', 'parflow', 'observation'
+truth_type = 'surrogate' # this is the type of truth_type = 'surrogate', 'parflow', 'observation'
 if truth_type == 'surrogate':
     load_params = True # boolean of weather or not load params, and directory for loading (below)
     mix_load = True # if mix load, then loads params from lstm test data, too
@@ -99,13 +101,13 @@ f_noise = 1e-02 # scaling factor (multiplied times every point in the time serie
 
 # Statistics and stat typ
 stat_method = 'full' #   stat_method = 'summary', 'full', 'embed'
-stat_typ = None # np.array([1,12,13]) # np.array([9,10])  # np.array([1,3,4,5,7,9,10,11])   # np.array([9,10]) # np.array([9,10]) #   use arrays for multiple parameters np.array([9,10])
-out_dim = None # 2 # number of dimensions for ML
+stat_typ = None # np.array([4,12,13]) # np.array([1,12,13]) # np.array([9,10])  # np.array([1,3,4,5,7,9,10,11])   # np.array([9,10]) # np.array([9,10]) #   use arrays for multiple parameters np.array([9,10])
+out_dim = None # 3 # 2 # number of dimensions for ML
 embed_type = None # 'MLP' # 'MLP', 'CNN', 'RNN'
 stat_typ = retStatTyp(stat_method, stat_typ=stat_typ, out_dim=out_dim, embed_type=embed_type)
 
 # hyperparameters
-L_sims = 5 # for l in L (number of sbi parameter spaces to create...)
+L_sims = 10 # for l in L (number of sbi parameter spaces to create...)
 num_dim = 2 # number of dimensions of parameters *NOTE - REEVALUATE THIS
 chars = ['[', ',', ']'] # for scaling things (needs to be consistent with num_dims)
 meth, model = 'SNPE', 'maf' # method, model for sbi
@@ -120,7 +122,7 @@ prior_arg1 = 0. # this is min for uniform, loc for lognormal (LN: -3 is good for
 prior_arg2 = 1. # this is max for uniform, scale for lognormal (LN: 1 is good for scalage between 0 and 1 over 4 orders of magnitude)
 
 #   brief textual description
-desc = 'running with modifying 0819_01_mod2_10_13_log_mod to create ensemblen ensemble with parflow truths'
+desc = 'Creating Posteriors for Experiment 3 - Ensemble Modeling'
 sbi_full_name = f'{ensemble_name}_{lstm_name}_{sbi_name}_{stat_typ}_{truth_type}'
 sbi_dir = f'/home/qh8373/SBI_TAYLOR/data/05_sbi_out/{sbi_full_name}/'
 
@@ -173,9 +175,7 @@ if Build_SBI:
     test_params, num_params, num_unique, DataX_test = parseUniqueParams(DataX_test, series_len)
     del list_df_cond
     
-    # print(test_params)
-    # print(test_params.shape)
-    
+
     '''
     Make decisions about how to run inference based on if it is 
         parflow, surrogate, observation, something else
@@ -187,7 +187,6 @@ if Build_SBI:
     elif truth_type == 'observation':
         None
     elif truth_type == 'surrogate':
-    
         # handle parameters for surrogate model
         # if load_params = False:
             # 1. define length of truths / parameters
@@ -205,14 +204,10 @@ if Build_SBI:
             else:
                 # 
                 test_params = x
-                
+    
             num_unique = len(test_params)
-            
-            # print(test_params)
-            # print(test_params.shape)
-            # print(num_unique)
-            
             del x, lhs, space
+
         # if load_params == True
             # 1. load in the random variables pickled earlier 
             # 2. define length of truths / parameters
@@ -231,8 +226,6 @@ if Build_SBI:
             theta = test_params[u, :]
             DataY_out = simulate(DataX=DataX_test, theta=theta, lstm=lstm_out)
             DataY_test[int(u*series_len):int((u+1)*series_len),:] = DataY_out
-            # print(theta)
-            # print(DataY_test[int(u*series_len):int((u+1)*series_len),:])
         del lstm_out, theta, u
 
 

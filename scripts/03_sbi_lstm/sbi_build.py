@@ -10,7 +10,7 @@ import sys
 sys.path.append('/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/03_sbi_lstm/')
 from sbi_build_utils import Box_LogNormal
 sys.path.append('/home/qh8373/SBI_TAYLOR/sbi_taylor/scripts/05_utils/')
-from sbiutils import setTheta, reshape_y
+from sbiutils import setTheta, reshape_y, setNoise
 from summaryutils import setStatSim
 
 import random
@@ -115,20 +115,11 @@ def buildPosterior(prior_type, prior_arg1, prior_arg2, num_dim,
         # y_o = simulate(DataX=DataX, theta=theta, lstm=lstm_out).data.numpy()[:,0] # previously, on 24
         y_o = simulate(DataX=DataX, theta=theta, lstm=lstm_out)
         
-        # print(y_o)
-        # print(y_o.shape)
-        # print('')
         
         if add_noise:
-            y_o = y_o + y_o * torch.randn(y_o.shape) * f_noise
-            # print(torch.randn(y_o.shape).shape)
-            # print('noise_added')
-            # print('')
-        # print(y_o)
-        # print(y_o.shape)
-        # sys.exit()
-
-        
+            # BELOW: y_o = y_o + y_o * torch.randn(y_o.shape) * f_noise
+            y_o = setNoise(y_o, f_noise)
+            
         # summary statics
         if stat_method == 'summary':
             print(type(y_o))

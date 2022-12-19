@@ -9,7 +9,9 @@
     # - First attempt at feeding PARFLOW forcings back in
 # 08/19/2021
     # - Git Repo created and added from original parent directory (see readme)
-    
+# 04/18/2022
+    # Creating new runs for Experiments 2 and 3 from paper to evaluate how they perform back in ParFlow
+    # 0418_01 (Experiment 2), 0418_02 (Experiment 3)
 
 # %%
 import os
@@ -27,8 +29,7 @@ import itertools
 # %%
 # QH: must edit each time
 # ensemble_name (for the ensemble of outputs generated)
-ensemble_name = '0819_01'
-
+ensemble_name = '0418_02'
 
 # (where it saves and references)
 path_folder = '/home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/' # '/scratch/taylor/ensembles_sbi/02_PARFLOW_OUT/02_PARFLOW_OUT/' # /home/qh8373/SBI_TAYLOR/data/02_PARFLOW_OUT/'
@@ -63,14 +64,14 @@ AOC_tuples = []
 for i in list(itertools.product(*AOC_vals)):
     AOC_tuples.append(i)
 
-# # temporary
-AOC_tuples = AOC_tuples[200:201]
-idx = 0
-for AO in AOC_tuples:
-    print(idx, AO)
-    idx = idx + 1
-print(AOC_tuples)
-del idx
+# # # temporary
+# AOC_tuples = AOC_tuples[200:201]
+# idx = 0
+# for AO in AOC_tuples:
+#     print(idx, AO)
+#     idx = idx + 1
+# print(AOC_tuples)
+# del idx
 
 # Run ensemble
 for idx in range(len(AOC_tuples)):
@@ -101,13 +102,13 @@ for idx in range(len(AOC_tuples)):
   os.chdir(run_dir)
   
   #setting all file paths to copy required input files
-  path_slope_x = f'/hydrodata/PFCLM/Taylor/Simulations/inputs/slope_x.pfb'
-  path_slope_y = f'/hydrodata/PFCLM/Taylor/Simulations/inputs/slope_y.pfb'
-  path_drv_clmin = f'/hydrodata/PFCLM/Taylor/Simulations/inputs/drv_clmin.dat'
-  path_drv_vegm = f'/hydrodata/PFCLM/Taylor/Simulations/inputs/drv_vegm_v2.Taylor.dat'
-  path_drv_vegp = f'/hydrodata/PFCLM/Taylor/Simulations/inputs/drv_vegp.dat'
-  path_indicator = f'/hydrodata/PFCLM/Taylor/Simulations/inputs/Taylor.IndicatorFile_v2.pfb'
-  path_pfsol = f'/hydrodata/PFCLM/Taylor/Simulations/inputs/Taylor.pfsol'
+  path_slope_x = f'/hydrodata/PFCLM/Taylor/simulations/inputs/slope_x.pfb'
+  path_slope_y = f'/hydrodata/PFCLM/Taylor/simulations/inputs/slope_y.pfb'
+  path_drv_clmin = f'/hydrodata/PFCLM/Taylor/simulations/inputs/drv_clmin.dat'
+  path_drv_vegm = f'/hydrodata/PFCLM/Taylor/simulations/inputs/drv_vegm_v2.Taylor.dat'
+  path_drv_vegp = f'/hydrodata/PFCLM/Taylor/simulations/inputs/drv_vegp.dat'
+  path_indicator = f'/hydrodata/PFCLM/Taylor/simulations/inputs/Taylor.IndicatorFile_v2.pfb'
+  path_pfsol = f'/hydrodata/PFCLM/Taylor/simulations/inputs/Taylor.pfsol'
   
   indicator = f'Taylor.IndicatorFile_v2.pfb'
   
@@ -135,7 +136,7 @@ for idx in range(len(AOC_tuples)):
   
   #copying initial pressure
   if new_Run:
-    ip0 = f'/hydrodata/PFCLM/Taylor/Simulations/{year_run}/Taylor_{year_run}.out.press.00000.pfb'
+    ip0 = f'/hydrodata/PFCLM/Taylor/simulations/{year_run}/Taylor_{year_run}.out.press.00000.pfb'
   else:
       # will by default look for previous year run of similar name previous year
       # *QH NOTE 06262021 - this section needs to be edited if using multiple years...
@@ -160,7 +161,7 @@ for idx in range(len(AOC_tuples)):
     'directory exists'
     
   #copy the correct forcing
-  met_path_to_copy = f'/hydrodata/PFCLM/Taylor/Simulations/{year_run}/NLDAS/'
+  met_path_to_copy = f'/hydrodata/PFCLM/Taylor/simulations/{year_run}/NLDAS/'
    
   
   for filename in glob.glob(os.path.join(met_path_to_copy, '*.pfb')):
